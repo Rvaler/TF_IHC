@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wnt-em-DAQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="Udh-OO-BVy">
+            <objects>
+                <viewController id="Wnt-em-DAQ" customClass="MainMenuViewController" customModule="PlatformGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j3L-va-D1s"/>
+                        <viewControllerLayoutGuide type="bottom" id="PvK-mh-g4O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6oS-gU-zS4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BlaBla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giX-Ko-Ubc">
+                                <rect key="frame" x="229" y="134" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-nK-meP">
+                                <rect key="frame" x="283" y="285" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="actionStartBtnPressed:" destination="Wnt-em-DAQ" eventType="touchUpInside" id="M0Y-Bc-pXt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U1q-nK-meP" firstAttribute="centerY" secondItem="6oS-gU-zS4" secondAttribute="centerY" id="AV6-Pw-8M6"/>
+                            <constraint firstItem="U1q-nK-meP" firstAttribute="top" secondItem="giX-Ko-Ubc" secondAttribute="bottom" constant="130" id="AXv-Mc-zWB"/>
+                            <constraint firstItem="U1q-nK-meP" firstAttribute="centerX" secondItem="6oS-gU-zS4" secondAttribute="centerX" id="L3d-5U-sgF"/>
+                            <constraint firstItem="giX-Ko-Ubc" firstAttribute="centerX" secondItem="6oS-gU-zS4" secondAttribute="centerX" id="foO-HB-owc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnStartGame" destination="AV6-Pw-8M6" id="cFv-0T-dpj"/>
+                        <outlet property="lblGameIntro" destination="giX-Ko-Ubc" id="YHh-Xz-Ccf"/>
+                        <segue destination="LVB-YS-i5n" kind="show" identifier="segueStartNewGame" id="5s7-fT-mno"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaH-Ry-r8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-464" y="266"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="CtS-rA-C9T">
+            <objects>
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="PlatformGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameSkView" destination="bdc-N1-crn" id="sz3-ef-FeQ"/>
+                        <segue destination="UHn-pq-0DQ" kind="show" identifier="segueGameOver" id="RkV-Dm-oSO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="3zw-hL-e5s">
+            <objects>
+                <viewController id="UHn-pq-0DQ" customClass="GameOverViewController" customModule="PlatformGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3zL-KY-11T"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fbq-Zz-9Z9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UCV-an-t55">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnM-Bb-S0r">
+                                <rect key="frame" x="257" y="160" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-tk-s0Q">
+                                <rect key="frame" x="262" y="303" width="76" height="30"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="Wnt-em-DAQ" kind="show" id="cTU-Il-q9C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3e-8g-SYY">
+                                <rect key="frame" x="275" y="253" width="50" height="30"/>
+                                <state key="normal" title="Restart"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="centerX" secondItem="UCV-an-t55" secondAttribute="centerX" id="B20-4e-WVD"/>
+                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="centerX" secondItem="UCV-an-t55" secondAttribute="centerX" id="Eqq-WP-btp"/>
+                            <constraint firstItem="l3e-8g-SYY" firstAttribute="top" secondItem="KnM-Bb-S0r" secondAttribute="bottom" constant="72" id="OHR-KD-cKN"/>
+                            <constraint firstItem="l3e-8g-SYY" firstAttribute="centerX" secondItem="UCV-an-t55" secondAttribute="centerX" id="YLI-aR-Tpc"/>
+                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="top" secondItem="3zL-KY-11T" secondAttribute="bottom" constant="140" id="i3N-h3-ht8"/>
+                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="top" secondItem="l3e-8g-SYY" secondAttribute="bottom" constant="20" id="uBB-J8-Pb6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obw-rn-j0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="266"/>
+        </scene>
+    </scenes>
+</document>
