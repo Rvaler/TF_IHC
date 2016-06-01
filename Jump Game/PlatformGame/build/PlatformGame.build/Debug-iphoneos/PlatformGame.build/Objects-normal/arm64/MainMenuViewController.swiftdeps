@@ -6,21 +6,21 @@ provides-nominal:
 provides-member:
 - ["C12PlatformGame22MainMenuViewController", ""]
 provides-dynamic-lookup:
-- "prepareForSegue"
-- "actionStartBtnPressed"
-- "btnStartGame"
-- "lblGameIntro"
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "actionStartBtnPressed"
+- "lblGameIntro"
+- "prepareForSegue"
+- "btnStartGame"
 depends-top-level:
-- !private "GameViewController"
 - "AnyObject"
-- "UILabel"
+- "NSLayoutConstraint"
+- "MainMenuViewController"
+- "UIStoryboardSegue"
 - "UIViewController"
 - !private "StringLiteralType"
-- "NSLayoutConstraint"
-- "UIStoryboardSegue"
-- "MainMenuViewController"
+- !private "GameViewController"
+- "UILabel"
 - !private "=="
 depends-member:
 - ["Ps9AnyObject", "actionStartBtnPressed"]
@@ -89,6 +89,7 @@ depends-member:
 - ["Ps9Equatable", "prepareForSegue"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- !private ["P12PlatformGame16GameOverDelegate", "menuViewController"]
 - !private ["C12PlatformGame18GameViewController", "menuViewController"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "actionStartBtnPressed"]
@@ -262,6 +263,7 @@ depends-nominal:
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- !private "P12PlatformGame16GameOverDelegate"
 - !private "C12PlatformGame18GameViewController"
 - "Ps8Hashable"
 - "C12PlatformGame22MainMenuViewController"

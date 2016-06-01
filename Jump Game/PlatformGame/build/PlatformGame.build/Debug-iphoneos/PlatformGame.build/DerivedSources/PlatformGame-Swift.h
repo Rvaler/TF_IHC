@@ -116,6 +116,7 @@ SWIFT_CLASS("_TtC12PlatformGame11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
 
@@ -123,6 +124,8 @@ SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
 @interface GameOverViewController : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)actionRestartBtnPressed:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -166,7 +169,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @end
 
 @class MainMenuViewController;
-@class UIStoryboardSegue;
+@class UIButton;
 
 SWIFT_CLASS("_TtC12PlatformGame18GameViewController")
 @interface GameViewController : UIViewController
@@ -181,6 +184,7 @@ SWIFT_CLASS("_TtC12PlatformGame18GameViewController")
 - (BOOL)prefersStatusBarHidden;
 - (void)viewWillDisappear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)gameOverViewController:(GameOverViewController * _Nonnull)gameOverViewController didTapPlayAgainButton:(UIButton * _Nonnull)button;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

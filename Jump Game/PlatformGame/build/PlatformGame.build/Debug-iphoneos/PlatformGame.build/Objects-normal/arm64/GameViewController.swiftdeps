@@ -8,39 +8,42 @@ provides-member:
 - ["C12PlatformGame18GameViewController", ""]
 - ["CSo6SKNode", "unarchiveFromFile"]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "menuViewController"
-- "prefersStatusBarHidden"
 - "viewWillDisappear"
-- "viewDidLoad"
-- "gameScene"
-- "gameSkView"
+- "didReceiveMemoryWarning"
 - "supportedInterfaceOrientations"
-- "unarchiveFromFile"
+- "menuViewController"
 - "gameOverViewController"
+- "gameOverViewController"
+- "prefersStatusBarHidden"
+- "gameSkView"
 - "shouldAutorotate"
+- "gameScene"
+- "viewDidLoad"
+- "unarchiveFromFile"
 - "prepareForSegue"
 depends-top-level:
-- "UIStoryboardSegue"
-- "MainMenuViewController"
-- !private "BooleanLiteralType"
-- "UIInterfaceOrientationMask"
-- "AnyObject"
-- "UIViewController"
-- !private "NSData"
-- "String"
-- !private "UIDevice"
-- "SKNode"
-- !private "StringLiteralType"
-- "GameOverViewController"
-- !private "NSKeyedUnarchiver"
-- "GameScene"
-- !private "NSBundle"
 - !private "NSKeyedArchiveRootObjectKey"
 - "SKView"
+- "GameScene"
+- "GameOverViewController"
 - "Bool"
+- "String"
+- "UIStoryboardSegue"
+- !private "NSData"
+- !private "BooleanLiteralType"
+- !private "UIDevice"
+- !private "NSBundle"
+- "UIInterfaceOrientationMask"
+- !private "NSKeyedUnarchiver"
+- !private "StringLiteralType"
+- "UIViewController"
+- "UIButton"
+- "SKNode"
 - "GameViewController"
+- "MainMenuViewController"
+- "GameOverDelegate"
 - !private "=="
+- "AnyObject"
 depends-member:
 - !private ["Ps9AnyObject", "GameScene"]
 - !private ["Ps9AnyObject", "NSBundle"]
@@ -52,6 +55,7 @@ depends-member:
 - !private ["Ps9AnyObject", "classForKeyedUnarchiver"]
 - !private ["Ps9AnyObject", "currentDevice"]
 - !private ["Ps9AnyObject", "decodeObjectForKey"]
+- !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "destinationViewController"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "finishDecoding"]
@@ -100,6 +104,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "classForKeyedUnarchiver"]
 - !private ["Ps11CVarArgType", "currentDevice"]
 - !private ["Ps11CVarArgType", "decodeObjectForKey"]
+- !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "destinationViewController"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "finishDecoding"]
@@ -143,6 +148,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "classForKeyedUnarchiver"]
 - !private ["Ps28CustomDebugStringConvertible", "currentDevice"]
 - !private ["Ps28CustomDebugStringConvertible", "decodeObjectForKey"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "destinationViewController"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "finishDecoding"]
@@ -186,6 +192,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "classForKeyedUnarchiver"]
 - !private ["Ps23CustomStringConvertible", "currentDevice"]
 - !private ["Ps23CustomStringConvertible", "decodeObjectForKey"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "destinationViewController"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "finishDecoding"]
@@ -235,6 +242,7 @@ depends-member:
 - !private ["Ps9Equatable", "classForKeyedUnarchiver"]
 - !private ["Ps9Equatable", "currentDevice"]
 - !private ["Ps9Equatable", "decodeObjectForKey"]
+- !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "destinationViewController"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "finishDecoding"]
@@ -267,6 +275,16 @@ depends-member:
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewWillDisappear"]
 - ["Ps9Equatable", ""]
+- !private ["P12PlatformGame16GameOverDelegate", "GameScene"]
+- !private ["P12PlatformGame16GameOverDelegate", "UIDevice"]
+- !private ["P12PlatformGame16GameOverDelegate", "UIInterfaceOrientationMask"]
+- ["P12PlatformGame16GameOverDelegate", "gameOverViewController"]
+- !private ["P12PlatformGame16GameOverDelegate", "gameScene"]
+- !private ["P12PlatformGame16GameOverDelegate", "gameSkView"]
+- !private ["P12PlatformGame16GameOverDelegate", "view"]
+- !private ["P12PlatformGame16GameOverDelegate", "viewDidLoad"]
+- ["P12PlatformGame16GameOverDelegate", ""]
+- !private ["C12PlatformGame22GameOverViewController", "delegate"]
 - !private ["C12PlatformGame9GameScene", "removeFromParent"]
 - !private ["C12PlatformGame9GameScene", "scaleMode"]
 - !private ["C12PlatformGame9GameScene", "unarchiveFromFile"]
@@ -277,6 +295,7 @@ depends-member:
 - ["C12PlatformGame18GameViewController", "GameScene"]
 - ["C12PlatformGame18GameViewController", "MainMenuViewController"]
 - ["C12PlatformGame18GameViewController", "SKView"]
+- ["C12PlatformGame18GameViewController", "UIButton"]
 - !private ["C12PlatformGame18GameViewController", "UIDevice"]
 - ["C12PlatformGame18GameViewController", "UIInterfaceOrientationMask"]
 - ["C12PlatformGame18GameViewController", "UIStoryboardSegue"]
@@ -308,6 +327,7 @@ depends-member:
 - !private ["Ps8Hashable", "classForKeyedUnarchiver"]
 - !private ["Ps8Hashable", "currentDevice"]
 - !private ["Ps8Hashable", "decodeObjectForKey"]
+- !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "destinationViewController"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "finishDecoding"]
@@ -355,6 +375,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIDevice"]
 - !private ["PSo8NSCoding", "UIInterfaceOrientationMask"]
 - !private ["PSo8NSCoding", "classForKeyedUnarchiver"]
+- !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "gameOverViewController"]
 - ["PSo8NSCoding", "gameScene"]
@@ -397,6 +418,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "GameScene"]
 - !private ["PSo26NSExtensionRequestHandling", "UIDevice"]
 - !private ["PSo26NSExtensionRequestHandling", "UIInterfaceOrientationMask"]
+- !private ["PSo26NSExtensionRequestHandling", "delegate"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "gameOverViewController"]
 - ["PSo26NSExtensionRequestHandling", "gameScene"]
@@ -428,12 +450,14 @@ depends-member:
 - ["CSo8NSObject", "SKNode"]
 - ["CSo8NSObject", "SKView"]
 - ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIDevice"]
 - ["CSo8NSObject", "UIInterfaceOrientationMask"]
 - ["CSo8NSObject", "UIStoryboardSegue"]
 - !private ["CSo8NSObject", "classForKeyedUnarchiver"]
 - !private ["CSo8NSObject", "currentDevice"]
 - !private ["CSo8NSObject", "decodeObjectForKey"]
+- !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "destinationViewController"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "finishDecoding"]
@@ -475,6 +499,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "classForKeyedUnarchiver"]
 - !private ["PSo16NSObjectProtocol", "currentDevice"]
 - !private ["PSo16NSObjectProtocol", "decodeObjectForKey"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "destinationViewController"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "finishDecoding"]
@@ -572,6 +597,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "GameScene"]
 - !private ["PSo21UIAppearanceContainer", "UIDevice"]
 - !private ["PSo21UIAppearanceContainer", "UIInterfaceOrientationMask"]
+- !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "gameOverViewController"]
 - ["PSo21UIAppearanceContainer", "gameScene"]
@@ -594,6 +620,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "GameScene"]
 - !private ["PSo18UIContentContainer", "UIDevice"]
 - !private ["PSo18UIContentContainer", "UIInterfaceOrientationMask"]
+- !private ["PSo18UIContentContainer", "delegate"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "gameOverViewController"]
 - ["PSo18UIContentContainer", "gameScene"]
@@ -623,6 +650,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "GameScene"]
 - !private ["PSo18UIFocusEnvironment", "UIDevice"]
 - !private ["PSo18UIFocusEnvironment", "UIInterfaceOrientationMask"]
+- !private ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "gameOverViewController"]
 - ["PSo18UIFocusEnvironment", "gameScene"]
@@ -656,10 +684,12 @@ depends-member:
 - ["CSo11UIResponder", "SKNode"]
 - ["CSo11UIResponder", "SKView"]
 - ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIDevice"]
 - ["CSo11UIResponder", "UIInterfaceOrientationMask"]
 - ["CSo11UIResponder", "UIStoryboardSegue"]
 - !private ["CSo11UIResponder", "classForKeyedUnarchiver"]
+- !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "gameOverViewController"]
 - ["CSo11UIResponder", "gameScene"]
@@ -687,6 +717,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "GameScene"]
 - !private ["PSo16UIStateRestoring", "UIDevice"]
 - !private ["PSo16UIStateRestoring", "UIInterfaceOrientationMask"]
+- !private ["PSo16UIStateRestoring", "delegate"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "gameOverViewController"]
 - ["PSo16UIStateRestoring", "gameScene"]
@@ -706,6 +737,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "GameScene"]
 - !private ["PSo18UITraitEnvironment", "UIDevice"]
 - !private ["PSo18UITraitEnvironment", "UIInterfaceOrientationMask"]
+- !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "gameOverViewController"]
 - ["PSo18UITraitEnvironment", "gameScene"]
@@ -740,10 +772,12 @@ depends-member:
 - ["CSo16UIViewController", "GameScene"]
 - ["CSo16UIViewController", "MainMenuViewController"]
 - ["CSo16UIViewController", "SKView"]
+- ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIDevice"]
 - ["CSo16UIViewController", "UIInterfaceOrientationMask"]
 - ["CSo16UIViewController", "UIStoryboardSegue"]
 - !private ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "delegate"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "gameOverViewController"]
 - ["CSo16UIViewController", "gameScene"]
@@ -778,6 +812,8 @@ depends-nominal:
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- "P12PlatformGame16GameOverDelegate"
+- !private "C12PlatformGame22GameOverViewController"
 - !private "C12PlatformGame9GameScene"
 - "C12PlatformGame18GameViewController"
 - "Ps8Hashable"
@@ -838,4 +874,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "43969e916d319841267cdf49c5812dac"
+interface-hash: "27fabe503d0537c802470c788eb0c1e9"

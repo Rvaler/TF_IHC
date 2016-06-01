@@ -98,6 +98,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3e-8g-SYY">
                                 <rect key="frame" x="275" y="253" width="50" height="30"/>
                                 <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="actionRestartBtnPressed:" destination="UHn-pq-0DQ" eventType="touchUpInside" id="XGn-1Y-nbt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,10 +113,16 @@
                             <constraint firstItem="gsk-tk-s0Q" firstAttribute="top" secondItem="l3e-8g-SYY" secondAttribute="bottom" constant="20" id="uBB-J8-Pb6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="LVB-YS-i5n" kind="show" identifier="segueRestartGame" id="ITr-p8-ckR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obw-rn-j0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="266"/>
+            <point key="canvasLocation" x="1164" y="266"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ITr-p8-ckR"/>
+    </inferredMetricsTieBreakers>
 </document>

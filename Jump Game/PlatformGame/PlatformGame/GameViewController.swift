@@ -25,7 +25,7 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GameOverDelegate {
     
     @IBOutlet var gameSkView: SKView!
     var gameOverViewController: GameOverViewController!
@@ -92,6 +92,12 @@ class GameViewController: UIViewController {
         if segue.identifier == "segueGameOver" {
             let vc = segue.destinationViewController as! GameOverViewController
             gameOverViewController = vc
+            gameOverViewController.delegate = self
         }
+    }
+    
+    func gameOverViewController(gameOverViewController: GameOverViewController, didTapPlayAgainButton button: UIButton) {
+        
+        viewDidLoad()
     }
 }

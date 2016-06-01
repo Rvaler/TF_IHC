@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol GameOverDelegate {
+    func gameOverViewController(gameOverViewController: GameOverViewController, didTapPlayAgainButton button: UIButton)
+}
+
 class GameOverViewController: UIViewController {
+    
+    var delegate: GameOverDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,17 @@ class GameOverViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func actionRestartBtnPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        delegate?.gameOverViewController(self, didTapPlayAgainButton: sender as! UIButton)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueRestartGame" {
+            //
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

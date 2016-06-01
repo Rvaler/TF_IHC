@@ -1,9 +1,9 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
-options: "ad22e7f6446069f2fde582bcb2fbde35"
-build_time: [518052366, 149174000]
+options: "5a446d8418233a623e15e682b54e1186"
+build_time: [518054601, 478865000]
 inputs:
-  "/Users/rvaler/Downloads/Flappy Bird/PlatformGame/PlatformGame/MainMenuViewController.swift": [518051956, 0]
-  "/Users/rvaler/Downloads/Flappy Bird/PlatformGame/PlatformGame/GameScene.swift": [518051897, 0]
-  "/Users/rvaler/Downloads/Flappy Bird/PlatformGame/PlatformGame/GameViewController.swift": [518052365, 0]
-  "/Users/rvaler/Downloads/Flappy Bird/PlatformGame/PlatformGame/AppDelegate.swift": [502155681, 0]
-  "/Users/rvaler/Downloads/Flappy Bird/PlatformGame/PlatformGame/GameOverViewController.swift": [518050909, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/MainMenuViewController.swift": [518051956, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameScene.swift": [518051897, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameViewController.swift": [518054564, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/AppDelegate.swift": [502155681, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameOverViewController.swift": [518054601, 0]
