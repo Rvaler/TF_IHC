@@ -10,6 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    var isTouchingScreen = false
     var viewController : UIViewController!
 
     //DEFINE THE COLLISION CATEGORIES
@@ -167,6 +168,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //IF THE GAME HAS STARTED, BEGIN SHOWING THE PIPES
         if (start) {
+            
+            if self.isTouchingScreen {
+                self.bird.physicsBody!.velocity = CGVector(dx: 0, dy: 210)
+            }
+            
             bottomPipe1.position = CGPointMake(bottomPipe1.position.x-8, 200);
             bottomPipe2.position = CGPointMake(bottomPipe2.position.x-8, bottomPipe2.position.y);
             topPipe1.position = CGPointMake(topPipe1.position.x-8, 800);
@@ -195,6 +201,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
     
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.isTouchingScreen = false
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     
         //USER HAS TOUCHED THE SCREEN, BEGIN THE GAME
@@ -202,7 +212,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if (birdIsActive)
         {
-        self.bird.physicsBody!.applyImpulse(CGVectorMake(0, 150))
+            self.isTouchingScreen = true
+//        self.bird.physicsBody!.applyImpulse(CGVectorMake(0, 150))
         }
         else
         {

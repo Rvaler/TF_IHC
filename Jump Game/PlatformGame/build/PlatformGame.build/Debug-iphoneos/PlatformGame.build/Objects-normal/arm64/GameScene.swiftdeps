@@ -6,68 +6,70 @@ provides-nominal:
 provides-member:
 - ["C12PlatformGame9GameScene", ""]
 provides-dynamic-lookup:
-- "birdAtlas"
-- "myBackground"
-- "bird"
-- "topPipe2"
-- "touchesBegan"
-- "start"
-- "bottomPipe1"
+- "touchesEnded"
+- "didBeginContact"
+- "isTouchingScreen"
 - "birdIsActive"
-- "randomBetweenNumbers"
-- "createBirdPhysics"
 - "bottomPipe2"
-- "pipeCategory"
-- "myFloor1"
-- "viewController"
-- "myPipesTexture"
-- "birdSprites"
-- "pipeHeight"
-- "myFloor2"
+- "birdAtlas"
+- "randomBetweenNumbers"
+- "bird"
 - "update"
+- "touchesBegan"
+- "viewController"
+- "pipeHeight"
+- "myPipesTexture"
+- "createBirdPhysics"
+- "myFloor2"
+- "topPipe1"
 - "didMoveToView"
 - "birdCategory"
-- "didBeginContact"
-- "topPipe1"
+- "birdSprites"
+- "start"
+- "pipeCategory"
+- "myFloor1"
+- "topPipe2"
+- "bottomPipe1"
+- "myBackground"
 depends-top-level:
-- "UInt32"
-- !private "print"
-- !private "CGVectorMake"
-- "BooleanLiteralType"
 - "Bool"
-- "CFTimeInterval"
-- "SKView"
-- "SKSpriteNode"
-- "<<"
-- "SKTextureAtlas"
-- !private "UINT32_MAX"
-- !private "+"
-- !private "CGPointMake"
-- "CGFloat"
-- !private "SKPhysicsBody"
-- !private "/"
-- !private "CGRectGetMidY"
-- "SKPhysicsContactDelegate"
-- !private "-"
-- !private "SKAction"
-- "SKScene"
-- "SKPhysicsContact"
-- !private "SKColor"
 - "StringLiteralType"
-- !private "CGPointZero"
-- "Array"
-- "SKTexture"
-- "UIEvent"
-- !private "min"
-- !private "*"
-- !private "<"
-- !private "arc4random"
-- "UIViewController"
+- "CFTimeInterval"
+- !private "/"
+- !private "SKAction"
+- "SKTextureAtlas"
 - !private "abs"
-- "GameScene"
-- "UITouch"
+- "SKSpriteNode"
+- !private "CGRectGetMidY"
 - "Set"
+- !private "+"
+- !private "SKColor"
+- "UIEvent"
+- !private "<"
+- "SKPhysicsContact"
+- "CGFloat"
+- !private "-"
+- !private "CGVector"
+- "UITouch"
+- !private "min"
+- "GameScene"
+- "SKTexture"
+- "Array"
+- !private "arc4random"
+- !private "SKPhysicsBody"
+- "BooleanLiteralType"
+- !private "CGPointMake"
+- "UInt32"
+- !private "*"
+- !private "print"
+- "UIViewController"
 - !private "CGPoint"
+- !private "UINT32_MAX"
+- !private "CGPointZero"
+- "<<"
+- "SKScene"
+- "SKPhysicsContactDelegate"
+- "SKView"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -79,7 +81,7 @@ depends-member:
 - !private ["Ps9AnyObject", "CGPointMake"]
 - !private ["Ps9AnyObject", "CGPointZero"]
 - !private ["Ps9AnyObject", "CGRectGetMidY"]
-- !private ["Ps9AnyObject", "CGVectorMake"]
+- !private ["Ps9AnyObject", "CGVector"]
 - !private ["Ps9AnyObject", "SKAction"]
 - !private ["Ps9AnyObject", "SKColor"]
 - !private ["Ps9AnyObject", "SKPhysicsBody"]
@@ -92,7 +94,6 @@ depends-member:
 - !private ["Ps9AnyObject", "allowsRotation"]
 - !private ["Ps9AnyObject", "anchorPoint"]
 - !private ["Ps9AnyObject", "animateWithTextures"]
-- !private ["Ps9AnyObject", "applyImpulse"]
 - !private ["Ps9AnyObject", "arc4random"]
 - !private ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "bird"]
@@ -112,6 +113,7 @@ depends-member:
 - !private ["Ps9AnyObject", "dynamic"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isTouchingScreen"]
 - !private ["Ps9AnyObject", "linearDamping"]
 - !private ["Ps9AnyObject", "min"]
 - ["Ps9AnyObject", "myBackground"]
@@ -135,7 +137,9 @@ depends-member:
 - ["Ps9AnyObject", "topPipe1"]
 - ["Ps9AnyObject", "topPipe2"]
 - ["Ps9AnyObject", "touchesBegan"]
+- ["Ps9AnyObject", "touchesEnded"]
 - ["Ps9AnyObject", "update"]
+- !private ["Ps9AnyObject", "velocity"]
 - ["Ps9AnyObject", "viewController"]
 - ["Ps9AnyObject", ""]
 - ["Sa", "Generator"]
@@ -176,6 +180,7 @@ depends-member:
 - !private ["VSC6CGRect", "width"]
 - !private ["VSC6CGSize", "height"]
 - !private ["VSC6CGSize", "width"]
+- !private ["VSC8CGVector", "init"]
 - ["Ps11CVarArgType", "Array"]
 - ["Ps11CVarArgType", "Bool"]
 - ["Ps11CVarArgType", "CGFloat"]
@@ -183,7 +188,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGPointMake"]
 - !private ["Ps11CVarArgType", "CGPointZero"]
 - !private ["Ps11CVarArgType", "CGRectGetMidY"]
-- !private ["Ps11CVarArgType", "CGVectorMake"]
+- !private ["Ps11CVarArgType", "CGVector"]
 - ["Ps11CVarArgType", "Distance"]
 - ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "SKAction"]
@@ -199,7 +204,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "allowsRotation"]
 - !private ["Ps11CVarArgType", "anchorPoint"]
 - !private ["Ps11CVarArgType", "animateWithTextures"]
-- !private ["Ps11CVarArgType", "applyImpulse"]
 - !private ["Ps11CVarArgType", "arc4random"]
 - !private ["Ps11CVarArgType", "backgroundColor"]
 - ["Ps11CVarArgType", "bird"]
@@ -219,6 +223,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "dynamic"]
 - !private ["Ps11CVarArgType", "frame"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isTouchingScreen"]
 - !private ["Ps11CVarArgType", "linearDamping"]
 - !private ["Ps11CVarArgType", "min"]
 - ["Ps11CVarArgType", "myBackground"]
@@ -242,7 +247,9 @@ depends-member:
 - ["Ps11CVarArgType", "topPipe1"]
 - ["Ps11CVarArgType", "topPipe2"]
 - ["Ps11CVarArgType", "touchesBegan"]
+- ["Ps11CVarArgType", "touchesEnded"]
 - ["Ps11CVarArgType", "update"]
+- !private ["Ps11CVarArgType", "velocity"]
 - ["Ps11CVarArgType", "viewController"]
 - ["Ps11CVarArgType", ""]
 - ["Ps14CollectionType", "Generator"]
@@ -263,7 +270,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGPointMake"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPointZero"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectGetMidY"]
-- !private ["Ps28CustomDebugStringConvertible", "CGVectorMake"]
+- !private ["Ps28CustomDebugStringConvertible", "CGVector"]
 - ["Ps28CustomDebugStringConvertible", "Generator"]
 - ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "SKAction"]
@@ -281,7 +288,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "anchorPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "animateWithTextures"]
 - !private ["Ps28CustomDebugStringConvertible", "append"]
-- !private ["Ps28CustomDebugStringConvertible", "applyImpulse"]
 - !private ["Ps28CustomDebugStringConvertible", "arc4random"]
 - !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - ["Ps28CustomDebugStringConvertible", "bird"]
@@ -301,6 +307,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "dynamic"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isTouchingScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "linearDamping"]
 - !private ["Ps28CustomDebugStringConvertible", "min"]
 - ["Ps28CustomDebugStringConvertible", "myBackground"]
@@ -325,7 +332,9 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "topPipe1"]
 - ["Ps28CustomDebugStringConvertible", "topPipe2"]
 - ["Ps28CustomDebugStringConvertible", "touchesBegan"]
+- ["Ps28CustomDebugStringConvertible", "touchesEnded"]
 - ["Ps28CustomDebugStringConvertible", "update"]
+- !private ["Ps28CustomDebugStringConvertible", "velocity"]
 - ["Ps28CustomDebugStringConvertible", "viewController"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "Array"]
@@ -335,7 +344,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGPointMake"]
 - !private ["Ps23CustomStringConvertible", "CGPointZero"]
 - !private ["Ps23CustomStringConvertible", "CGRectGetMidY"]
-- !private ["Ps23CustomStringConvertible", "CGVectorMake"]
+- !private ["Ps23CustomStringConvertible", "CGVector"]
 - ["Ps23CustomStringConvertible", "Distance"]
 - ["Ps23CustomStringConvertible", "Generator"]
 - ["Ps23CustomStringConvertible", "Index"]
@@ -357,7 +366,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "anchorPoint"]
 - !private ["Ps23CustomStringConvertible", "animateWithTextures"]
 - !private ["Ps23CustomStringConvertible", "append"]
-- !private ["Ps23CustomStringConvertible", "applyImpulse"]
 - !private ["Ps23CustomStringConvertible", "arc4random"]
 - !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - ["Ps23CustomStringConvertible", "bird"]
@@ -377,6 +385,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "dynamic"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isTouchingScreen"]
 - !private ["Ps23CustomStringConvertible", "linearDamping"]
 - !private ["Ps23CustomStringConvertible", "min"]
 - ["Ps23CustomStringConvertible", "myBackground"]
@@ -401,7 +410,9 @@ depends-member:
 - ["Ps23CustomStringConvertible", "topPipe1"]
 - ["Ps23CustomStringConvertible", "topPipe2"]
 - ["Ps23CustomStringConvertible", "touchesBegan"]
+- ["Ps23CustomStringConvertible", "touchesEnded"]
 - ["Ps23CustomStringConvertible", "update"]
+- !private ["Ps23CustomStringConvertible", "velocity"]
 - ["Ps23CustomStringConvertible", "viewController"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
@@ -412,7 +423,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGPointMake"]
 - !private ["Ps9Equatable", "CGPointZero"]
 - !private ["Ps9Equatable", "CGRectGetMidY"]
-- !private ["Ps9Equatable", "CGVectorMake"]
+- !private ["Ps9Equatable", "CGVector"]
 - ["Ps9Equatable", "Distance"]
 - ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "SKAction"]
@@ -429,7 +440,6 @@ depends-member:
 - !private ["Ps9Equatable", "allowsRotation"]
 - !private ["Ps9Equatable", "anchorPoint"]
 - !private ["Ps9Equatable", "animateWithTextures"]
-- !private ["Ps9Equatable", "applyImpulse"]
 - !private ["Ps9Equatable", "arc4random"]
 - !private ["Ps9Equatable", "backgroundColor"]
 - ["Ps9Equatable", "bird"]
@@ -450,6 +460,7 @@ depends-member:
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isTouchingScreen"]
 - !private ["Ps9Equatable", "linearDamping"]
 - !private ["Ps9Equatable", "min"]
 - ["Ps9Equatable", "myBackground"]
@@ -473,7 +484,9 @@ depends-member:
 - ["Ps9Equatable", "topPipe1"]
 - ["Ps9Equatable", "topPipe2"]
 - ["Ps9Equatable", "touchesBegan"]
+- ["Ps9Equatable", "touchesEnded"]
 - ["Ps9Equatable", "update"]
+- !private ["Ps9Equatable", "velocity"]
 - ["Ps9Equatable", "viewController"]
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "x"]
@@ -496,7 +509,7 @@ depends-member:
 - !private ["C12PlatformGame9GameScene", "CGPointMake"]
 - !private ["C12PlatformGame9GameScene", "CGPointZero"]
 - !private ["C12PlatformGame9GameScene", "CGRectGetMidY"]
-- !private ["C12PlatformGame9GameScene", "CGVectorMake"]
+- !private ["C12PlatformGame9GameScene", "CGVector"]
 - !private ["C12PlatformGame9GameScene", "SKAction"]
 - !private ["C12PlatformGame9GameScene", "SKColor"]
 - !private ["C12PlatformGame9GameScene", "SKPhysicsBody"]
@@ -529,6 +542,7 @@ depends-member:
 - ["C12PlatformGame9GameScene", "didMoveToView"]
 - !private ["C12PlatformGame9GameScene", "frame"]
 - ["C12PlatformGame9GameScene", "init"]
+- ["C12PlatformGame9GameScene", "isTouchingScreen"]
 - !private ["C12PlatformGame9GameScene", "min"]
 - ["C12PlatformGame9GameScene", "myBackground"]
 - ["C12PlatformGame9GameScene", "myFloor1"]
@@ -544,6 +558,7 @@ depends-member:
 - ["C12PlatformGame9GameScene", "topPipe1"]
 - ["C12PlatformGame9GameScene", "topPipe2"]
 - ["C12PlatformGame9GameScene", "touchesBegan"]
+- ["C12PlatformGame9GameScene", "touchesEnded"]
 - ["C12PlatformGame9GameScene", "update"]
 - ["C12PlatformGame9GameScene", "viewController"]
 - ["Ps13GeneratorType", "Element"]
@@ -554,7 +569,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGPointMake"]
 - !private ["Ps8Hashable", "CGPointZero"]
 - !private ["Ps8Hashable", "CGRectGetMidY"]
-- !private ["Ps8Hashable", "CGVectorMake"]
+- !private ["Ps8Hashable", "CGVector"]
 - ["Ps8Hashable", "Distance"]
 - ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "SKAction"]
@@ -571,7 +586,6 @@ depends-member:
 - !private ["Ps8Hashable", "allowsRotation"]
 - !private ["Ps8Hashable", "anchorPoint"]
 - !private ["Ps8Hashable", "animateWithTextures"]
-- !private ["Ps8Hashable", "applyImpulse"]
 - !private ["Ps8Hashable", "arc4random"]
 - !private ["Ps8Hashable", "backgroundColor"]
 - ["Ps8Hashable", "bird"]
@@ -591,6 +605,7 @@ depends-member:
 - !private ["Ps8Hashable", "dynamic"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isTouchingScreen"]
 - !private ["Ps8Hashable", "linearDamping"]
 - !private ["Ps8Hashable", "min"]
 - ["Ps8Hashable", "myBackground"]
@@ -614,7 +629,9 @@ depends-member:
 - ["Ps8Hashable", "topPipe1"]
 - ["Ps8Hashable", "topPipe2"]
 - ["Ps8Hashable", "touchesBegan"]
+- ["Ps8Hashable", "touchesEnded"]
 - ["Ps8Hashable", "update"]
+- !private ["Ps8Hashable", "velocity"]
 - ["Ps8Hashable", "viewController"]
 - ["Ps8Hashable", ""]
 - ["Ps9Indexable", "Generator"]
@@ -666,7 +683,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGPointMake"]
 - !private ["PSo8NSCoding", "CGPointZero"]
 - !private ["PSo8NSCoding", "CGRectGetMidY"]
-- !private ["PSo8NSCoding", "CGVectorMake"]
+- !private ["PSo8NSCoding", "CGVector"]
 - !private ["PSo8NSCoding", "SKAction"]
 - !private ["PSo8NSCoding", "SKColor"]
 - !private ["PSo8NSCoding", "SKPhysicsBody"]
@@ -679,7 +696,6 @@ depends-member:
 - !private ["PSo8NSCoding", "allowsRotation"]
 - !private ["PSo8NSCoding", "anchorPoint"]
 - !private ["PSo8NSCoding", "animateWithTextures"]
-- !private ["PSo8NSCoding", "applyImpulse"]
 - !private ["PSo8NSCoding", "arc4random"]
 - !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "bird"]
@@ -699,6 +715,7 @@ depends-member:
 - !private ["PSo8NSCoding", "dynamic"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "isTouchingScreen"]
 - !private ["PSo8NSCoding", "linearDamping"]
 - !private ["PSo8NSCoding", "min"]
 - ["PSo8NSCoding", "myBackground"]
@@ -722,7 +739,9 @@ depends-member:
 - ["PSo8NSCoding", "topPipe1"]
 - ["PSo8NSCoding", "topPipe2"]
 - ["PSo8NSCoding", "touchesBegan"]
+- ["PSo8NSCoding", "touchesEnded"]
 - ["PSo8NSCoding", "update"]
+- !private ["PSo8NSCoding", "velocity"]
 - ["PSo8NSCoding", "viewController"]
 - ["PSo8NSCoding", ""]
 - ["PSo9NSCopying", "Array"]
@@ -732,7 +751,7 @@ depends-member:
 - !private ["PSo9NSCopying", "CGPointMake"]
 - !private ["PSo9NSCopying", "CGPointZero"]
 - !private ["PSo9NSCopying", "CGRectGetMidY"]
-- !private ["PSo9NSCopying", "CGVectorMake"]
+- !private ["PSo9NSCopying", "CGVector"]
 - !private ["PSo9NSCopying", "SKAction"]
 - !private ["PSo9NSCopying", "SKColor"]
 - !private ["PSo9NSCopying", "SKPhysicsBody"]
@@ -745,7 +764,6 @@ depends-member:
 - !private ["PSo9NSCopying", "allowsRotation"]
 - !private ["PSo9NSCopying", "anchorPoint"]
 - !private ["PSo9NSCopying", "animateWithTextures"]
-- !private ["PSo9NSCopying", "applyImpulse"]
 - !private ["PSo9NSCopying", "arc4random"]
 - !private ["PSo9NSCopying", "backgroundColor"]
 - ["PSo9NSCopying", "bird"]
@@ -764,6 +782,7 @@ depends-member:
 - !private ["PSo9NSCopying", "dynamic"]
 - !private ["PSo9NSCopying", "frame"]
 - ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "isTouchingScreen"]
 - !private ["PSo9NSCopying", "linearDamping"]
 - !private ["PSo9NSCopying", "min"]
 - ["PSo9NSCopying", "myBackground"]
@@ -785,7 +804,9 @@ depends-member:
 - ["PSo9NSCopying", "topPipe1"]
 - ["PSo9NSCopying", "topPipe2"]
 - ["PSo9NSCopying", "touchesBegan"]
+- ["PSo9NSCopying", "touchesEnded"]
 - ["PSo9NSCopying", "update"]
+- !private ["PSo9NSCopying", "velocity"]
 - ["PSo9NSCopying", "viewController"]
 - ["PSo9NSCopying", ""]
 - !private ["PSo26NSExtensionRequestHandling", "performSegueWithIdentifier"]
@@ -797,7 +818,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGPointMake"]
 - !private ["CSo8NSObject", "CGPointZero"]
 - !private ["CSo8NSObject", "CGRectGetMidY"]
-- !private ["CSo8NSObject", "CGVectorMake"]
+- !private ["CSo8NSObject", "CGVector"]
 - !private ["CSo8NSObject", "SKAction"]
 - !private ["CSo8NSObject", "SKColor"]
 - !private ["CSo8NSObject", "SKPhysicsBody"]
@@ -817,7 +838,6 @@ depends-member:
 - !private ["CSo8NSObject", "allowsRotation"]
 - !private ["CSo8NSObject", "anchorPoint"]
 - !private ["CSo8NSObject", "animateWithTextures"]
-- !private ["CSo8NSObject", "applyImpulse"]
 - !private ["CSo8NSObject", "arc4random"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "bird"]
@@ -837,6 +857,7 @@ depends-member:
 - !private ["CSo8NSObject", "dynamic"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isTouchingScreen"]
 - !private ["CSo8NSObject", "linearDamping"]
 - !private ["CSo8NSObject", "min"]
 - ["CSo8NSObject", "myBackground"]
@@ -860,7 +881,9 @@ depends-member:
 - ["CSo8NSObject", "topPipe1"]
 - ["CSo8NSObject", "topPipe2"]
 - ["CSo8NSObject", "touchesBegan"]
+- ["CSo8NSObject", "touchesEnded"]
 - ["CSo8NSObject", "update"]
+- !private ["CSo8NSObject", "velocity"]
 - ["CSo8NSObject", "viewController"]
 - ["PSo16NSObjectProtocol", "Array"]
 - ["PSo16NSObjectProtocol", "Bool"]
@@ -869,7 +892,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGPointMake"]
 - !private ["PSo16NSObjectProtocol", "CGPointZero"]
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidY"]
-- !private ["PSo16NSObjectProtocol", "CGVectorMake"]
+- !private ["PSo16NSObjectProtocol", "CGVector"]
 - !private ["PSo16NSObjectProtocol", "SKAction"]
 - !private ["PSo16NSObjectProtocol", "SKColor"]
 - !private ["PSo16NSObjectProtocol", "SKPhysicsBody"]
@@ -882,7 +905,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "allowsRotation"]
 - !private ["PSo16NSObjectProtocol", "anchorPoint"]
 - !private ["PSo16NSObjectProtocol", "animateWithTextures"]
-- !private ["PSo16NSObjectProtocol", "applyImpulse"]
 - !private ["PSo16NSObjectProtocol", "arc4random"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "bird"]
@@ -902,6 +924,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "dynamic"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isTouchingScreen"]
 - !private ["PSo16NSObjectProtocol", "linearDamping"]
 - !private ["PSo16NSObjectProtocol", "min"]
 - ["PSo16NSObjectProtocol", "myBackground"]
@@ -925,7 +948,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", "topPipe1"]
 - ["PSo16NSObjectProtocol", "topPipe2"]
 - ["PSo16NSObjectProtocol", "touchesBegan"]
+- ["PSo16NSObjectProtocol", "touchesEnded"]
 - ["PSo16NSObjectProtocol", "update"]
+- !private ["PSo16NSObjectProtocol", "velocity"]
 - ["PSo16NSObjectProtocol", "viewController"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
@@ -949,7 +974,7 @@ depends-member:
 - !private ["CSo12SKEffectNode", "CGPointMake"]
 - !private ["CSo12SKEffectNode", "CGPointZero"]
 - !private ["CSo12SKEffectNode", "CGRectGetMidY"]
-- !private ["CSo12SKEffectNode", "CGVectorMake"]
+- !private ["CSo12SKEffectNode", "CGVector"]
 - !private ["CSo12SKEffectNode", "SKAction"]
 - !private ["CSo12SKEffectNode", "SKColor"]
 - !private ["CSo12SKEffectNode", "SKPhysicsBody"]
@@ -981,6 +1006,7 @@ depends-member:
 - ["CSo12SKEffectNode", "didMoveToView"]
 - !private ["CSo12SKEffectNode", "frame"]
 - ["CSo12SKEffectNode", "init"]
+- ["CSo12SKEffectNode", "isTouchingScreen"]
 - !private ["CSo12SKEffectNode", "min"]
 - ["CSo12SKEffectNode", "myBackground"]
 - ["CSo12SKEffectNode", "myFloor1"]
@@ -996,6 +1022,7 @@ depends-member:
 - ["CSo12SKEffectNode", "topPipe1"]
 - ["CSo12SKEffectNode", "topPipe2"]
 - ["CSo12SKEffectNode", "touchesBegan"]
+- ["CSo12SKEffectNode", "touchesEnded"]
 - ["CSo12SKEffectNode", "update"]
 - ["CSo12SKEffectNode", "viewController"]
 - ["CSo6SKNode", "Array"]
@@ -1006,7 +1033,7 @@ depends-member:
 - !private ["CSo6SKNode", "CGPointMake"]
 - !private ["CSo6SKNode", "CGPointZero"]
 - !private ["CSo6SKNode", "CGRectGetMidY"]
-- !private ["CSo6SKNode", "CGVectorMake"]
+- !private ["CSo6SKNode", "CGVector"]
 - !private ["CSo6SKNode", "SKAction"]
 - !private ["CSo6SKNode", "SKColor"]
 - !private ["CSo6SKNode", "SKPhysicsBody"]
@@ -1039,6 +1066,7 @@ depends-member:
 - ["CSo6SKNode", "didMoveToView"]
 - !private ["CSo6SKNode", "frame"]
 - ["CSo6SKNode", "init"]
+- ["CSo6SKNode", "isTouchingScreen"]
 - !private ["CSo6SKNode", "min"]
 - ["CSo6SKNode", "myBackground"]
 - ["CSo6SKNode", "myFloor1"]
@@ -1057,16 +1085,17 @@ depends-member:
 - ["CSo6SKNode", "topPipe1"]
 - ["CSo6SKNode", "topPipe2"]
 - ["CSo6SKNode", "touchesBegan"]
+- ["CSo6SKNode", "touchesEnded"]
 - ["CSo6SKNode", "update"]
 - ["CSo6SKNode", "viewController"]
 - !private ["CSo13SKPhysicsBody", "allowsRotation"]
-- !private ["CSo13SKPhysicsBody", "applyImpulse"]
 - !private ["CSo13SKPhysicsBody", "categoryBitMask"]
 - !private ["CSo13SKPhysicsBody", "contactTestBitMask"]
 - !private ["CSo13SKPhysicsBody", "dynamic"]
 - !private ["CSo13SKPhysicsBody", "init"]
 - !private ["CSo13SKPhysicsBody", "linearDamping"]
 - !private ["CSo13SKPhysicsBody", "restitution"]
+- !private ["CSo13SKPhysicsBody", "velocity"]
 - ["PSo24SKPhysicsContactDelegate", "Array"]
 - ["PSo24SKPhysicsContactDelegate", "Bool"]
 - ["PSo24SKPhysicsContactDelegate", "CGFloat"]
@@ -1074,7 +1103,7 @@ depends-member:
 - !private ["PSo24SKPhysicsContactDelegate", "CGPointMake"]
 - !private ["PSo24SKPhysicsContactDelegate", "CGPointZero"]
 - !private ["PSo24SKPhysicsContactDelegate", "CGRectGetMidY"]
-- !private ["PSo24SKPhysicsContactDelegate", "CGVectorMake"]
+- !private ["PSo24SKPhysicsContactDelegate", "CGVector"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKAction"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKColor"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKPhysicsBody"]
@@ -1097,6 +1126,7 @@ depends-member:
 - ["PSo24SKPhysicsContactDelegate", "didBeginContact"]
 - ["PSo24SKPhysicsContactDelegate", "didEndContact"]
 - !private ["PSo24SKPhysicsContactDelegate", "frame"]
+- !private ["PSo24SKPhysicsContactDelegate", "isTouchingScreen"]
 - !private ["PSo24SKPhysicsContactDelegate", "min"]
 - !private ["PSo24SKPhysicsContactDelegate", "myBackground"]
 - !private ["PSo24SKPhysicsContactDelegate", "myFloor1"]
@@ -1121,7 +1151,7 @@ depends-member:
 - !private ["CSo7SKScene", "CGPointMake"]
 - !private ["CSo7SKScene", "CGPointZero"]
 - !private ["CSo7SKScene", "CGRectGetMidY"]
-- !private ["CSo7SKScene", "CGVectorMake"]
+- !private ["CSo7SKScene", "CGVector"]
 - !private ["CSo7SKScene", "SKAction"]
 - !private ["CSo7SKScene", "SKColor"]
 - !private ["CSo7SKScene", "SKPhysicsBody"]
@@ -1153,6 +1183,7 @@ depends-member:
 - ["CSo7SKScene", "didMoveToView"]
 - !private ["CSo7SKScene", "frame"]
 - ["CSo7SKScene", "init"]
+- ["CSo7SKScene", "isTouchingScreen"]
 - !private ["CSo7SKScene", "min"]
 - ["CSo7SKScene", "myBackground"]
 - ["CSo7SKScene", "myFloor1"]
@@ -1168,6 +1199,7 @@ depends-member:
 - ["CSo7SKScene", "topPipe1"]
 - ["CSo7SKScene", "topPipe2"]
 - ["CSo7SKScene", "touchesBegan"]
+- ["CSo7SKScene", "touchesEnded"]
 - ["CSo7SKScene", "update"]
 - ["CSo7SKScene", "viewController"]
 - ["CSo7SKScene", ""]
@@ -1215,7 +1247,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGPointMake"]
 - !private ["CSo11UIResponder", "CGPointZero"]
 - !private ["CSo11UIResponder", "CGRectGetMidY"]
-- !private ["CSo11UIResponder", "CGVectorMake"]
+- !private ["CSo11UIResponder", "CGVector"]
 - !private ["CSo11UIResponder", "SKAction"]
 - !private ["CSo11UIResponder", "SKColor"]
 - !private ["CSo11UIResponder", "SKPhysicsBody"]
@@ -1248,6 +1280,7 @@ depends-member:
 - ["CSo11UIResponder", "didMoveToView"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "isTouchingScreen"]
 - !private ["CSo11UIResponder", "min"]
 - ["CSo11UIResponder", "myBackground"]
 - ["CSo11UIResponder", "myFloor1"]
@@ -1267,6 +1300,7 @@ depends-member:
 - ["CSo11UIResponder", "topPipe1"]
 - ["CSo11UIResponder", "topPipe2"]
 - ["CSo11UIResponder", "touchesBegan"]
+- ["CSo11UIResponder", "touchesEnded"]
 - ["CSo11UIResponder", "update"]
 - ["CSo11UIResponder", "viewController"]
 - !private ["PSo16UIStateRestoring", "performSegueWithIdentifier"]
@@ -1364,6 +1398,7 @@ depends-nominal:
 - !private "VSC7CGPoint"
 - !private "VSC6CGRect"
 - !private "VSC6CGSize"
+- !private "VSC8CGVector"
 - "Ps11CVarArgType"
 - "Ps14CollectionType"
 - "Ps10Comparable"
@@ -1457,4 +1492,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "7b01b291b8e165c6f0f85039bfcc51ca"
+interface-hash: "e14911fd44d09e00c01809f57846cdff"

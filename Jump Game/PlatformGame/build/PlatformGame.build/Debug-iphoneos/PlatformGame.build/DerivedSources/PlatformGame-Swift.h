@@ -140,6 +140,7 @@ SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
 
 SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
+@property (nonatomic) BOOL isTouchingScreen;
 @property (nonatomic, strong) UIViewController * _Null_unspecified viewController;
 @property (nonatomic, readonly) uint32_t birdCategory;
 @property (nonatomic, readonly) uint32_t pipeCategory;
@@ -160,6 +161,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)update:(CFTimeInterval)currentTime;
 - (CGFloat)randomBetweenNumbers:(CGFloat)firstNum secondNum:(CGFloat)secondNum;
+- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)createBirdPhysics;
 - (void)didBeginContact:(SKPhysicsContact * _Nonnull)contact;
