@@ -57,13 +57,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         birdSprites.append(birdAtlas.textureNamed("player3"))
         birdSprites.append(birdAtlas.textureNamed("player4"))
         
+        //SET UP THE FLOOR AND PIPES INITIAL POSITION AND IMAGE
+        myFloor1 = SKSpriteNode(imageNamed: "iceFloor")
+        myFloor2 = SKSpriteNode(imageNamed: "iceFloor")
+        bottomPipe1 = SKSpriteNode(imageNamed: "iceBottomSpike")
+        bottomPipe2 = SKSpriteNode(imageNamed: "iceBottomSpike")
+        topPipe1 = SKSpriteNode(imageNamed: "iceTopSpike")
+        topPipe2 = SKSpriteNode(imageNamed: "iceTopSpike")
+        myFloor1.anchorPoint = CGPointZero;
+        myFloor1.position = CGPointMake(0, 0);
+        myFloor2.anchorPoint = CGPointZero;
+        myFloor2.position = CGPointMake(myFloor1.size.width-1, 0);
+        
         //SET UP THE BACKGROUND IMAGE AND MAKE IT STATIC
-        myBackground = SKSpriteNode(imageNamed: "background")
+        myBackground = SKSpriteNode(imageNamed: "iceBackground")
         myBackground.anchorPoint = CGPointZero;
-        myBackground.position = CGPointMake(100, 0);
+        myBackground.position = CGPointMake(200, myFloor1.frame.size.height);
         
         //BLEND THE BACKGROUND IMAGE WITH THE SAME BACKGROUND COLOR
-        self.backgroundColor = SKColor(red: 80.0/255.0, green: 192.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        self.backgroundColor = SKColor(red: 238/255, green: 248/255.0, blue: 253/255.0, alpha: 1.0)
         
         //SET UP THE BIRD'S INITIAL POSITION AND IMAGE
         bird = SKSpriteNode(texture:birdSprites[0])
@@ -72,17 +84,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bird.size.width = bird.size.width / 10
         bird.size.height = bird.size.height / 10
         
-        //SET UP THE FLOOR AND PIPES INITIAL POSITION AND IMAGE
-        myFloor1 = SKSpriteNode(imageNamed: "floor")
-        myFloor2 = SKSpriteNode(imageNamed: "floor")
-        bottomPipe1 = SKSpriteNode(imageNamed: "bottomPipe")
-        bottomPipe2 = SKSpriteNode(imageNamed: "bottomPipe")
-        topPipe1 = SKSpriteNode(imageNamed: "topPipe")
-        topPipe2 = SKSpriteNode(imageNamed: "topPipe")
-        myFloor1.anchorPoint = CGPointZero;
-        myFloor1.position = CGPointMake(0, 0);
-        myFloor2.anchorPoint = CGPointZero;
-        myFloor2.position = CGPointMake(myFloor1.size.width-1, 0);
+        
         
         bottomPipe1.position = CGPointMake(800, 200);
         bottomPipe1.size.height = bottomPipe1.size.height / 2
@@ -130,10 +132,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.bird.runAction(repeatAction)
         
         //CREATE A PHYSICS BODY FOR THE PIPES AND FLOOR
-        bottomPipe1.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "bottomPipe"), size: self.bottomPipe1.size)
-        bottomPipe2.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "bottomPipe"), size: self.bottomPipe2.size)
-        topPipe1.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "topPipe"), size: self.topPipe1.size)
-        topPipe2.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "topPipe"), size: self.topPipe2.size)
+        bottomPipe1.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "iceBottomSpike"), size: self.bottomPipe1.size)
+        bottomPipe2.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "iceBottomSpike"), size: self.bottomPipe2.size)
+        topPipe1.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "iceTopSpike"), size: self.topPipe1.size)
+        topPipe2.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "iceTopSpike"), size: self.topPipe2.size)
 
         //PREVENT THE PIPES FROM MOVING AROUND
         bottomPipe1.physicsBody?.dynamic = false
@@ -148,8 +150,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(currentTime: CFTimeInterval)
     {
-     
-        //KEEP THE BIRD CENTERED IN THE MIDDLE OF THE SCREEN
         
         bird.position.x = self.frame.width / 3 + 40
         bird.physicsBody?.allowsRotation = false
@@ -188,7 +188,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 topPipe2.position = CGPointMake(topPipe1.position.x + topPipe1.size.width * 4, pipeHeight);
             }
             
-            if (bottomPipe1.position.x < self.frame.width/2)
+            if (bottomPipe1.position.x < self.frame.width / 3 + 40)
             {
                 //GENERATE A RANDOM NUMBER BETWEEN 100 AND 240 (THE MAXIMUM SIZE OF THE PIPES)
                 pipeHeight = randomBetweenNumbers(100, secondNum: 240)
