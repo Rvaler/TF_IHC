@@ -29,6 +29,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bottomPipe2 = SKSpriteNode()
     var topPipe1 = SKSpriteNode()
     var topPipe2 = SKSpriteNode()
+    
+    var tutorialImage = SKSpriteNode()
 
     //CREATE AN OUTLINE OF THE PIPES FOR COLLISION PURPOSES
     let myPipesTexture = SKTexture(imageNamed: "pipe")
@@ -80,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //SET UP THE BIRD'S INITIAL POSITION AND IMAGE
         bird = SKSpriteNode(texture:birdSprites[0])
         bird.position = CGPoint(x: self.frame.width / 4, y: CGRectGetMidY(self.frame))
-//        bird.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+
         bird.size.width = bird.size.width / 10
         bird.size.height = bird.size.height / 10
         
@@ -125,6 +127,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //LASTLY, ADD THE BIRD TO THE SCENE
         addChild(self.bird)
+    
+        self.tutorialImage = SKSpriteNode(imageNamed: "playerTutorial")
+        tutorialImage.position = CGPoint(x: self.frame.width / 2, y: self.frame.height * (2 / 3) )
+        self.addChild(tutorialImage)
+        self.tutorialImage.hidden = false
         
         //ANIMATE THE BIRD AND REPEAT THE ANIMATION FOREVER
         let animateBird = SKAction.animateWithTextures(self.birdSprites, timePerFrame: 0.1)
@@ -173,6 +180,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.bird.physicsBody!.velocity = CGVector(dx: 0, dy: 210)
             }
             
+//            bottomPipe1.position = CGPointMake(bottomPipe1.position.x-8, 200);
+//            bottomPipe2.position = CGPointMake(bottomPipe2.position.x-8, bottomPipe2.position.y);
+//            topPipe1.position = CGPointMake(topPipe1.position.x-8, 800);
+//            topPipe2.position = CGPointMake(topPipe2.position.x-8, 700);
+//            
+//            if (bottomPipe1.position.x < -bottomPipe1.size.width + 600 / 2){
+//                bottomPipe1.position = CGPointMake(bottomPipe2.position.x + bottomPipe2.size.width * 4, pipeHeight);
+//                topPipe1.position = CGPointMake(topPipe2.position.x + topPipe2.size.width * 4, pipeHeight);
+//            }
+//            
+//            if (bottomPipe2.position.x < -bottomPipe2.size.width + 600 / 2) {
+//                bottomPipe2.position = CGPointMake(bottomPipe1.position.x + bottomPipe1.size.width * 4, pipeHeight);
+//                topPipe2.position = CGPointMake(topPipe1.position.x + topPipe1.size.width * 4, pipeHeight);
+//            }
+//            
+//            if (bottomPipe1.position.x < self.frame.width / 3 + 40)
+//            {
+//                //GENERATE A RANDOM NUMBER BETWEEN 100 AND 240 (THE MAXIMUM SIZE OF THE PIPES)
+//                pipeHeight = randomBetweenNumbers(100, secondNum: 240)
+//            }
+            
             bottomPipe1.position = CGPointMake(bottomPipe1.position.x-8, 200);
             bottomPipe2.position = CGPointMake(bottomPipe2.position.x-8, bottomPipe2.position.y);
             topPipe1.position = CGPointMake(topPipe1.position.x-8, 800);
@@ -196,6 +224,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    
     //RANDOM NUMBER GENERATOR
     func randomBetweenNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat{
         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
@@ -209,7 +238,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
         //USER HAS TOUCHED THE SCREEN, BEGIN THE GAME
         start = true
-        
+        self.tutorialImage.hidden = true
         if (birdIsActive)
         {
             self.isTouchingScreen = true
@@ -232,6 +261,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bird.physicsBody?.categoryBitMask = birdCategory
         bird.physicsBody?.contactTestBitMask = pipeCategory
         birdIsActive = true
+        self.bird.physicsBody!.applyImpulse(CGVectorMake(0, 100))
     }
     
     func didBeginContact(contact: SKPhysicsContact) {

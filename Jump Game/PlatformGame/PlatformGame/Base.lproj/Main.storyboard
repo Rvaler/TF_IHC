@@ -3,7 +3,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pipe_Dream.ttf">
+            <string>PipeDream</string>
+            <string>PipeDream</string>
+            <string>PipeDream</string>
+            <string>PipeDream</string>
+            <string>PipeDream</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Main Menu View Controller-->
         <scene sceneID="Udh-OO-BVy">
@@ -17,30 +27,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BlaBla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giX-Ko-Ubc">
-                                <rect key="frame" x="229" y="134" width="143" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Y3h-2r-aKB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Bird" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giX-Ko-Ubc">
+                                <rect key="frame" x="180" y="74" width="239" height="80.5"/>
+                                <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="72"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-nK-meP">
-                                <rect key="frame" x="283" y="285" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="237" y="471" width="126" height="59"/>
+                                <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="42"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="actionStartBtnPressed:" destination="Wnt-em-DAQ" eventType="touchUpInside" id="M0Y-Bc-pXt"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerIntro" translatesAutoresizingMaskIntoConstraints="NO" id="bOs-A5-hEU">
+                                <rect key="frame" x="155" y="193" width="290" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="EQn-PU-XtZ"/>
+                                    <constraint firstAttribute="width" secondItem="bOs-A5-hEU" secondAttribute="height" multiplier="290:247" id="SNg-ZP-Qfx"/>
+                                    <constraint firstAttribute="width" secondItem="bOs-A5-hEU" secondAttribute="height" multiplier="15:8" id="dAB-d5-0t1"/>
+                                    <constraint firstAttribute="width" constant="290" id="uJs-HE-b0X"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SNg-ZP-Qfx"/>
+                                        <exclude reference="dAB-d5-0t1"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U1q-nK-meP" firstAttribute="centerY" secondItem="6oS-gU-zS4" secondAttribute="centerY" id="AV6-Pw-8M6"/>
-                            <constraint firstItem="U1q-nK-meP" firstAttribute="top" secondItem="giX-Ko-Ubc" secondAttribute="bottom" constant="130" id="AXv-Mc-zWB"/>
-                            <constraint firstItem="U1q-nK-meP" firstAttribute="centerX" secondItem="6oS-gU-zS4" secondAttribute="centerX" id="L3d-5U-sgF"/>
+                            <constraint firstAttribute="trailing" secondItem="Y3h-2r-aKB" secondAttribute="trailing" id="71C-O4-uMH"/>
+                            <constraint firstItem="bOs-A5-hEU" firstAttribute="top" secondItem="giX-Ko-Ubc" secondAttribute="bottom" constant="38.5" id="FRM-6F-MvQ"/>
+                            <constraint firstItem="U1q-nK-meP" firstAttribute="centerX" secondItem="Y3h-2r-aKB" secondAttribute="centerX" id="HaW-1r-WGN"/>
+                            <constraint firstItem="PvK-mh-g4O" firstAttribute="top" secondItem="U1q-nK-meP" secondAttribute="bottom" constant="70" id="Jjy-KD-sG8"/>
+                            <constraint firstItem="U1q-nK-meP" firstAttribute="top" secondItem="bOs-A5-hEU" secondAttribute="bottom" constant="107" id="KyK-aa-YKe"/>
+                            <constraint firstItem="giX-Ko-Ubc" firstAttribute="top" secondItem="j3L-va-D1s" secondAttribute="bottom" constant="54" id="LEC-aq-DAo"/>
+                            <constraint firstItem="Y3h-2r-aKB" firstAttribute="leading" secondItem="6oS-gU-zS4" secondAttribute="leading" id="WbZ-cH-b2o"/>
+                            <constraint firstItem="bOs-A5-hEU" firstAttribute="centerX" secondItem="Y3h-2r-aKB" secondAttribute="centerX" id="XCo-LP-FjE"/>
+                            <constraint firstItem="PvK-mh-g4O" firstAttribute="top" secondItem="Y3h-2r-aKB" secondAttribute="bottom" id="YdN-wl-ys4"/>
+                            <constraint firstItem="bOs-A5-hEU" firstAttribute="centerX" secondItem="Y3h-2r-aKB" secondAttribute="centerX" id="f7S-zg-cCE"/>
                             <constraint firstItem="giX-Ko-Ubc" firstAttribute="centerX" secondItem="6oS-gU-zS4" secondAttribute="centerX" id="foO-HB-owc"/>
+                            <constraint firstItem="Y3h-2r-aKB" firstAttribute="top" secondItem="6oS-gU-zS4" secondAttribute="top" id="iz1-i2-yJc"/>
+                            <constraint firstItem="bOs-A5-hEU" firstAttribute="top" secondItem="giX-Ko-Ubc" secondAttribute="bottom" constant="81.5" id="udP-Bx-HbZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f7S-zg-cCE"/>
+                                <exclude reference="udP-Bx-HbZ"/>
+                                <exclude reference="KyK-aa-YKe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="btnStartGame" destination="AV6-Pw-8M6" id="cFv-0T-dpj"/>
                         <outlet property="lblGameIntro" destination="giX-Ko-Ubc" id="YHh-Xz-Ccf"/>
                         <segue destination="LVB-YS-i5n" kind="show" identifier="segueStartNewGame" id="5s7-fT-mno"/>
                     </connections>
@@ -83,36 +129,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Iv9-nO-RwX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnM-Bb-S0r">
-                                <rect key="frame" x="257" y="160" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="142" y="83" width="315.5" height="71.5"/>
+                                <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="64"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-tk-s0Q">
-                                <rect key="frame" x="262" y="303" width="76" height="30"/>
-                                <state key="normal" title="Main Menu"/>
-                                <connections>
-                                    <segue destination="Wnt-em-DAQ" kind="show" id="cTU-Il-q9C"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3e-8g-SYY">
-                                <rect key="frame" x="275" y="253" width="50" height="30"/>
-                                <state key="normal" title="Restart"/>
+                                <rect key="frame" x="191" y="436" width="219" height="59"/>
+                                <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="42"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="actionRestartBtnPressed:" destination="UHn-pq-0DQ" eventType="touchUpInside" id="XGn-1Y-nbt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemies" translatesAutoresizingMaskIntoConstraints="NO" id="BOI-Q8-TO4">
+                                <rect key="frame" x="217" y="199" width="167" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="OAZ-ke-7Fe"/>
+                                    <constraint firstAttribute="width" constant="167" id="sv8-5q-AJc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-tk-s0Q">
+                                <rect key="frame" x="239.5" y="503" width="121" height="39"/>
+                                <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="24"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wnt-em-DAQ" kind="show" id="cTU-Il-q9C"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="centerX" secondItem="UCV-an-t55" secondAttribute="centerX" id="B20-4e-WVD"/>
-                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="centerX" secondItem="UCV-an-t55" secondAttribute="centerX" id="Eqq-WP-btp"/>
-                            <constraint firstItem="l3e-8g-SYY" firstAttribute="top" secondItem="KnM-Bb-S0r" secondAttribute="bottom" constant="72" id="OHR-KD-cKN"/>
-                            <constraint firstItem="l3e-8g-SYY" firstAttribute="centerX" secondItem="UCV-an-t55" secondAttribute="centerX" id="YLI-aR-Tpc"/>
-                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="top" secondItem="3zL-KY-11T" secondAttribute="bottom" constant="140" id="i3N-h3-ht8"/>
-                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="top" secondItem="l3e-8g-SYY" secondAttribute="bottom" constant="20" id="uBB-J8-Pb6"/>
+                            <constraint firstItem="Iv9-nO-RwX" firstAttribute="leading" secondItem="UCV-an-t55" secondAttribute="leading" id="1Mg-yd-M9j"/>
+                            <constraint firstAttribute="trailing" secondItem="Iv9-nO-RwX" secondAttribute="trailing" id="1Th-00-XCi"/>
+                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="top" secondItem="l3e-8g-SYY" secondAttribute="bottom" constant="8" id="CWx-FH-syR"/>
+                            <constraint firstItem="Iv9-nO-RwX" firstAttribute="top" secondItem="UCV-an-t55" secondAttribute="top" id="Dm4-qf-0RS"/>
+                            <constraint firstItem="Iv9-nO-RwX" firstAttribute="leading" secondItem="KnM-Bb-S0r" secondAttribute="trailing" constant="-338" id="FdW-er-y2f"/>
+                            <constraint firstItem="BOI-Q8-TO4" firstAttribute="leading" secondItem="Iv9-nO-RwX" secondAttribute="trailing" constant="-383" id="P4Z-QK-e1e"/>
+                            <constraint firstItem="l3e-8g-SYY" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="T4n-kv-EUv"/>
+                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="UOg-wM-cJ4"/>
+                            <constraint firstItem="BOI-Q8-TO4" firstAttribute="top" secondItem="KnM-Bb-S0r" secondAttribute="bottom" constant="45" id="VNb-3s-HIs"/>
+                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="top" secondItem="3zL-KY-11T" secondAttribute="bottom" constant="63" id="X4n-gE-UUA"/>
+                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="aZ1-R2-nIc"/>
+                            <constraint firstItem="gsk-tk-s0Q" firstAttribute="centerY" secondItem="Iv9-nO-RwX" secondAttribute="centerY" id="i2g-Xb-ucS"/>
+                            <constraint firstItem="BOI-Q8-TO4" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="lcY-kN-ZuJ"/>
+                            <constraint firstItem="Fbq-Zz-9Z9" firstAttribute="top" secondItem="Iv9-nO-RwX" secondAttribute="bottom" id="nra-Pv-8GW"/>
+                            <constraint firstItem="l3e-8g-SYY" firstAttribute="top" secondItem="BOI-Q8-TO4" secondAttribute="bottom" constant="29.5" id="qeu-XI-NMr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FdW-er-y2f"/>
+                                <exclude reference="P4Z-QK-e1e"/>
+                                <exclude reference="i2g-Xb-ucS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <segue destination="LVB-YS-i5n" kind="show" identifier="segueRestartGame" id="ITr-p8-ckR"/>
@@ -123,6 +201,11 @@
             <point key="canvasLocation" x="1124" y="-80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="enemies" width="168" height="208"/>
+        <image name="manuBackground" width="375" height="667"/>
+        <image name="playerIntro" width="287" height="210"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ITr-p8-ckR"/>
     </inferredMetricsTieBreakers>

@@ -31,13 +31,6 @@ class GameOverViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
         delegate?.gameOverViewController(self, didTapPlayAgainButton: sender as! UIButton)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "segueRestartGame" {
-            //
-        }
-        
-    }
 
     /*
     // MARK: - Navigation

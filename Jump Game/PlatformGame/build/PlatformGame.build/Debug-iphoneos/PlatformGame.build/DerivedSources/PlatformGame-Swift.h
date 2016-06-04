@@ -116,7 +116,6 @@ SWIFT_CLASS("_TtC12PlatformGame11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
 
@@ -125,7 +124,6 @@ SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)actionRestartBtnPressed:(id _Nonnull)sender;
-- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -153,6 +151,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @property (nonatomic, strong) SKSpriteNode * _Nonnull bottomPipe2;
 @property (nonatomic, strong) SKSpriteNode * _Nonnull topPipe1;
 @property (nonatomic, strong) SKSpriteNode * _Nonnull topPipe2;
+@property (nonatomic, strong) SKSpriteNode * _Nonnull tutorialImage;
 @property (nonatomic, readonly, strong) SKTexture * _Nonnull myPipesTexture;
 @property (nonatomic, strong) SKSpriteNode * _Nonnull myBackground;
 @property (nonatomic) CGFloat pipeHeight;
@@ -171,6 +170,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @end
 
 @class MainMenuViewController;
+@class UIStoryboardSegue;
 @class UIButton;
 
 SWIFT_CLASS("_TtC12PlatformGame18GameViewController")
