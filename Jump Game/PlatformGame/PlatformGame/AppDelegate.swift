@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  PlatformGame
 //
-//  Created by Jamie Brennan on 2015-11-29.
-//  Copyright (c) 2015 2D Game World. All rights reserved.
+//  Created by Rafael Valer on 5/31/16.
+//  Copyright © 2016 2D Game World. All rights reserved.
 //
 
 import UIKit

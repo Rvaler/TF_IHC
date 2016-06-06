@@ -116,6 +116,18 @@ SWIFT_CLASS("_TtC12PlatformGame11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
+@interface GameOverViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)actionRestartBtnPressed:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class SKTextureAtlas;
 @class SKTexture;
 @class SKSpriteNode;
@@ -123,10 +135,11 @@ SWIFT_CLASS("_TtC12PlatformGame11AppDelegate")
 @class UITouch;
 @class UIEvent;
 @class SKPhysicsContact;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
+@property (nonatomic) BOOL isTouchingScreen;
+@property (nonatomic, strong) UIViewController * _Null_unspecified viewController;
 @property (nonatomic, readonly) uint32_t birdCategory;
 @property (nonatomic, readonly) uint32_t pipeCategory;
 @property (nonatomic, readonly, strong) SKTextureAtlas * _Nonnull birdAtlas;
@@ -138,6 +151,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @property (nonatomic, strong) SKSpriteNode * _Nonnull bottomPipe2;
 @property (nonatomic, strong) SKSpriteNode * _Nonnull topPipe1;
 @property (nonatomic, strong) SKSpriteNode * _Nonnull topPipe2;
+@property (nonatomic, strong) SKSpriteNode * _Nonnull tutorialImage;
 @property (nonatomic, readonly, strong) SKTexture * _Nonnull myPipesTexture;
 @property (nonatomic, strong) SKSpriteNode * _Nonnull myBackground;
 @property (nonatomic) CGFloat pipeHeight;
@@ -146,6 +160,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)update:(CFTimeInterval)currentTime;
 - (CGFloat)randomBetweenNumbers:(CGFloat)firstNum secondNum:(CGFloat)secondNum;
+- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)createBirdPhysics;
 - (void)didBeginContact:(SKPhysicsContact * _Nonnull)contact;
@@ -154,15 +169,39 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
+@class MainMenuViewController;
+@class UIStoryboardSegue;
+@class UIButton;
 
 SWIFT_CLASS("_TtC12PlatformGame18GameViewController")
 @interface GameViewController : UIViewController
+@property (nonatomic, strong) IBOutlet SKView * _Null_unspecified gameSkView;
+@property (nonatomic, strong) GameOverViewController * _Null_unspecified gameOverViewController;
+@property (nonatomic, strong) MainMenuViewController * _Null_unspecified menuViewController;
+@property (nonatomic, strong) GameScene * _Null_unspecified gameScene;
 - (void)viewDidLoad;
 - (BOOL)shouldAutorotate;
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations;
 - (void)didReceiveMemoryWarning;
 - (BOOL)prefersStatusBarHidden;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)gameOverViewController:(GameOverViewController * _Nonnull)gameOverViewController didTapPlayAgainButton:(UIButton * _Nonnull)button;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UILabel;
+@class NSLayoutConstraint;
+
+SWIFT_CLASS("_TtC12PlatformGame22MainMenuViewController")
+@interface MainMenuViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lblGameIntro;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified btnStartGame;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)actionStartBtnPressed:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

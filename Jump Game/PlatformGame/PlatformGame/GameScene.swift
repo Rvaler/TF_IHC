@@ -2,8 +2,8 @@
 //  GameScene.swift
 //  PlatformGame
 //
-//  Created on 2016-01-03.
-//  Copyright (c) 2015 2D Game World. All rights reserved.
+//  Created by Rafael Valer on 5/31/16.
+//  Copyright © 2016 2D Game World. All rights reserved.
 //
 
 import SpriteKit
@@ -17,7 +17,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let birdCategory:UInt32 = 0x1 << 0
     let pipeCategory:UInt32 = 0x1 << 1
 
-    //CREATE THE BIRD ATLAS FOR ANIMATION
     let birdAtlas = SKTextureAtlas(named:"player.atlas")
     var birdSprites = Array<SKTexture>()
     var bird = SKSpriteNode()
@@ -112,20 +111,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         topPipe2.physicsBody?.categoryBitMask = pipeCategory
         topPipe2.physicsBody?.contactTestBitMask = birdCategory
         
-        //ADD THE BACKGROUND TO THE SCENE
         addChild(self.myBackground)
         
-        //ADD THE PIPES TO THE SCENE
         addChild(self.bottomPipe1)
         addChild(self.bottomPipe2)
         addChild(self.topPipe1)
         addChild(self.topPipe2)
 
-        //ADD THE FLOOR TO THE SCENE
         addChild(self.myFloor1)
         addChild(self.myFloor2)
         
-        //LASTLY, ADD THE BIRD TO THE SCENE
         addChild(self.bird)
     
         self.tutorialImage = SKSpriteNode(imageNamed: "playerTutorial")
@@ -179,27 +174,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if self.isTouchingScreen {
                 self.bird.physicsBody!.velocity = CGVector(dx: 0, dy: 210)
             }
-            
-//            bottomPipe1.position = CGPointMake(bottomPipe1.position.x-8, 200);
-//            bottomPipe2.position = CGPointMake(bottomPipe2.position.x-8, bottomPipe2.position.y);
-//            topPipe1.position = CGPointMake(topPipe1.position.x-8, 800);
-//            topPipe2.position = CGPointMake(topPipe2.position.x-8, 700);
-//            
-//            if (bottomPipe1.position.x < -bottomPipe1.size.width + 600 / 2){
-//                bottomPipe1.position = CGPointMake(bottomPipe2.position.x + bottomPipe2.size.width * 4, pipeHeight);
-//                topPipe1.position = CGPointMake(topPipe2.position.x + topPipe2.size.width * 4, pipeHeight);
-//            }
-//            
-//            if (bottomPipe2.position.x < -bottomPipe2.size.width + 600 / 2) {
-//                bottomPipe2.position = CGPointMake(bottomPipe1.position.x + bottomPipe1.size.width * 4, pipeHeight);
-//                topPipe2.position = CGPointMake(topPipe1.position.x + topPipe1.size.width * 4, pipeHeight);
-//            }
-//            
-//            if (bottomPipe1.position.x < self.frame.width / 3 + 40)
-//            {
-//                //GENERATE A RANDOM NUMBER BETWEEN 100 AND 240 (THE MAXIMUM SIZE OF THE PIPES)
-//                pipeHeight = randomBetweenNumbers(100, secondNum: 240)
-//            }
             
             bottomPipe1.position = CGPointMake(bottomPipe1.position.x-8, 200);
             bottomPipe2.position = CGPointMake(bottomPipe2.position.x-8, bottomPipe2.position.y);
