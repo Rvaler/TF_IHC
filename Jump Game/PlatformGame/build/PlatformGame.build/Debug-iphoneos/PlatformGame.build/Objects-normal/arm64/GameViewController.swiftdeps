@@ -8,42 +8,43 @@ provides-member:
 - ["C12PlatformGame18GameViewController", ""]
 - ["CSo6SKNode", "unarchiveFromFile"]
 provides-dynamic-lookup:
-- "shouldAutorotate"
-- "didReceiveMemoryWarning"
-- "menuViewController"
-- "prefersStatusBarHidden"
-- "viewDidLoad"
 - "viewWillDisappear"
 - "gameOverViewController"
 - "gameOverViewController"
-- "unarchiveFromFile"
-- "gameScene"
 - "supportedInterfaceOrientations"
+- "gameScene"
 - "prepareForSegue"
 - "gameSkView"
+- "prefersStatusBarHidden"
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "menuViewController"
+- "shouldAutorotate"
+- "unarchiveFromFile"
 depends-top-level:
-- "UIButton"
-- "SKView"
-- "UIStoryboardSegue"
-- "MainMenuViewController"
-- !private "NSData"
-- "GameOverDelegate"
-- "AnyObject"
-- "UIInterfaceOrientationMask"
-- !private "NSKeyedArchiveRootObjectKey"
-- !private "BooleanLiteralType"
-- !private "UIDevice"
-- "UIViewController"
-- "Bool"
-- "GameOverViewController"
-- "GameScene"
-- !private "NSBundle"
-- "String"
-- !private "=="
-- "SKNode"
-- "GameViewController"
 - !private "StringLiteralType"
+- "GameOverViewController"
+- !private "NSKeyedArchiveRootObjectKey"
 - !private "NSKeyedUnarchiver"
+- "AnyObject"
+- "GameViewController"
+- "UIButton"
+- !private "=="
+- "String"
+- "UIStoryboardSegue"
+- "UIViewController"
+- "UIInterfaceOrientationMask"
+- "GameOverDelegate"
+- "SKNode"
+- !private "BooleanLiteralType"
+- "SKView"
+- "MainMenuViewController"
+- "GameScene"
+- !private "Int"
+- !private "NSBundle"
+- "Bool"
+- !private "UIDevice"
+- !private "NSData"
 depends-member:
 - !private ["Ps9AnyObject", "GameScene"]
 - !private ["Ps9AnyObject", "NSBundle"]
@@ -76,6 +77,7 @@ depends-member:
 - !private ["Ps9AnyObject", "removeFromParent"]
 - !private ["Ps9AnyObject", "scaleMode"]
 - !private ["Ps9AnyObject", "scene"]
+- !private ["Ps9AnyObject", "score"]
 - !private ["Ps9AnyObject", "setClass"]
 - ["Ps9AnyObject", "shouldAutorotate"]
 - !private ["Ps9AnyObject", "showsFPS"]
@@ -125,6 +127,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "removeFromParent"]
 - !private ["Ps11CVarArgType", "scaleMode"]
 - !private ["Ps11CVarArgType", "scene"]
+- !private ["Ps11CVarArgType", "score"]
 - !private ["Ps11CVarArgType", "setClass"]
 - ["Ps11CVarArgType", "shouldAutorotate"]
 - !private ["Ps11CVarArgType", "showsFPS"]
@@ -169,6 +172,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "removeFromParent"]
 - !private ["Ps28CustomDebugStringConvertible", "scaleMode"]
 - !private ["Ps28CustomDebugStringConvertible", "scene"]
+- !private ["Ps28CustomDebugStringConvertible", "score"]
 - !private ["Ps28CustomDebugStringConvertible", "setClass"]
 - ["Ps28CustomDebugStringConvertible", "shouldAutorotate"]
 - !private ["Ps28CustomDebugStringConvertible", "showsFPS"]
@@ -213,6 +217,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "removeFromParent"]
 - !private ["Ps23CustomStringConvertible", "scaleMode"]
 - !private ["Ps23CustomStringConvertible", "scene"]
+- !private ["Ps23CustomStringConvertible", "score"]
 - !private ["Ps23CustomStringConvertible", "setClass"]
 - ["Ps23CustomStringConvertible", "shouldAutorotate"]
 - !private ["Ps23CustomStringConvertible", "showsFPS"]
@@ -263,6 +268,7 @@ depends-member:
 - !private ["Ps9Equatable", "removeFromParent"]
 - !private ["Ps9Equatable", "scaleMode"]
 - !private ["Ps9Equatable", "scene"]
+- !private ["Ps9Equatable", "score"]
 - !private ["Ps9Equatable", "setClass"]
 - ["Ps9Equatable", "shouldAutorotate"]
 - !private ["Ps9Equatable", "showsFPS"]
@@ -285,6 +291,7 @@ depends-member:
 - !private ["P12PlatformGame16GameOverDelegate", "viewDidLoad"]
 - ["P12PlatformGame16GameOverDelegate", ""]
 - !private ["C12PlatformGame22GameOverViewController", "delegate"]
+- !private ["C12PlatformGame22GameOverViewController", "score"]
 - !private ["C12PlatformGame9GameScene", "removeFromParent"]
 - !private ["C12PlatformGame9GameScene", "scaleMode"]
 - !private ["C12PlatformGame9GameScene", "unarchiveFromFile"]
@@ -293,6 +300,7 @@ depends-member:
 - ["C12PlatformGame18GameViewController", "Bool"]
 - ["C12PlatformGame18GameViewController", "GameOverViewController"]
 - ["C12PlatformGame18GameViewController", "GameScene"]
+- !private ["C12PlatformGame18GameViewController", "Int"]
 - ["C12PlatformGame18GameViewController", "MainMenuViewController"]
 - ["C12PlatformGame18GameViewController", "SKView"]
 - ["C12PlatformGame18GameViewController", "UIButton"]
@@ -348,6 +356,7 @@ depends-member:
 - !private ["Ps8Hashable", "removeFromParent"]
 - !private ["Ps8Hashable", "scaleMode"]
 - !private ["Ps8Hashable", "scene"]
+- !private ["Ps8Hashable", "score"]
 - !private ["Ps8Hashable", "setClass"]
 - ["Ps8Hashable", "shouldAutorotate"]
 - !private ["Ps8Hashable", "showsFPS"]
@@ -391,6 +400,7 @@ depends-member:
 - !private ["PSo8NSCoding", "removeFromParent"]
 - !private ["PSo8NSCoding", "scaleMode"]
 - !private ["PSo8NSCoding", "scene"]
+- !private ["PSo8NSCoding", "score"]
 - ["PSo8NSCoding", "shouldAutorotate"]
 - !private ["PSo8NSCoding", "showsFPS"]
 - !private ["PSo8NSCoding", "showsNodeCount"]
@@ -427,6 +437,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "menuViewController"]
 - ["PSo26NSExtensionRequestHandling", "prefersStatusBarHidden"]
 - ["PSo26NSExtensionRequestHandling", "prepareForSegue"]
+- !private ["PSo26NSExtensionRequestHandling", "score"]
 - ["PSo26NSExtensionRequestHandling", "shouldAutorotate"]
 - ["PSo26NSExtensionRequestHandling", "supportedInterfaceOrientations"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
@@ -442,6 +453,7 @@ depends-member:
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "GameOverViewController"]
 - ["CSo8NSObject", "GameScene"]
+- !private ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "MainMenuViewController"]
 - !private ["CSo8NSObject", "NSBundle"]
 - !private ["CSo8NSObject", "NSData"]
@@ -478,6 +490,7 @@ depends-member:
 - !private ["CSo8NSObject", "removeFromParent"]
 - !private ["CSo8NSObject", "scaleMode"]
 - !private ["CSo8NSObject", "scene"]
+- !private ["CSo8NSObject", "score"]
 - !private ["CSo8NSObject", "setClass"]
 - ["CSo8NSObject", "shouldAutorotate"]
 - !private ["CSo8NSObject", "showsFPS"]
@@ -520,6 +533,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "removeFromParent"]
 - !private ["PSo16NSObjectProtocol", "scaleMode"]
 - !private ["PSo16NSObjectProtocol", "scene"]
+- !private ["PSo16NSObjectProtocol", "score"]
 - !private ["PSo16NSObjectProtocol", "setClass"]
 - ["PSo16NSObjectProtocol", "shouldAutorotate"]
 - !private ["PSo16NSObjectProtocol", "showsFPS"]
@@ -609,6 +623,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "prepareForSegue"]
 - !private ["PSo21UIAppearanceContainer", "presentScene"]
 - !private ["PSo21UIAppearanceContainer", "scene"]
+- !private ["PSo21UIAppearanceContainer", "score"]
 - ["PSo21UIAppearanceContainer", "shouldAutorotate"]
 - !private ["PSo21UIAppearanceContainer", "showsFPS"]
 - !private ["PSo21UIAppearanceContainer", "showsNodeCount"]
@@ -629,6 +644,7 @@ depends-member:
 - ["PSo18UIContentContainer", "menuViewController"]
 - ["PSo18UIContentContainer", "prefersStatusBarHidden"]
 - ["PSo18UIContentContainer", "prepareForSegue"]
+- !private ["PSo18UIContentContainer", "score"]
 - ["PSo18UIContentContainer", "shouldAutorotate"]
 - ["PSo18UIContentContainer", "supportedInterfaceOrientations"]
 - !private ["PSo18UIContentContainer", "view"]
@@ -662,6 +678,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "prepareForSegue"]
 - !private ["PSo18UIFocusEnvironment", "presentScene"]
 - !private ["PSo18UIFocusEnvironment", "scene"]
+- !private ["PSo18UIFocusEnvironment", "score"]
 - ["PSo18UIFocusEnvironment", "shouldAutorotate"]
 - !private ["PSo18UIFocusEnvironment", "showsFPS"]
 - !private ["PSo18UIFocusEnvironment", "showsNodeCount"]
@@ -676,6 +693,7 @@ depends-member:
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "GameOverViewController"]
 - ["CSo11UIResponder", "GameScene"]
+- !private ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "MainMenuViewController"]
 - !private ["CSo11UIResponder", "NSBundle"]
 - !private ["CSo11UIResponder", "NSData"]
@@ -705,6 +723,7 @@ depends-member:
 - !private ["CSo11UIResponder", "removeFromParent"]
 - !private ["CSo11UIResponder", "scaleMode"]
 - !private ["CSo11UIResponder", "scene"]
+- !private ["CSo11UIResponder", "score"]
 - ["CSo11UIResponder", "shouldAutorotate"]
 - !private ["CSo11UIResponder", "showsFPS"]
 - !private ["CSo11UIResponder", "showsNodeCount"]
@@ -726,6 +745,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "menuViewController"]
 - ["PSo16UIStateRestoring", "prefersStatusBarHidden"]
 - ["PSo16UIStateRestoring", "prepareForSegue"]
+- !private ["PSo16UIStateRestoring", "score"]
 - ["PSo16UIStateRestoring", "shouldAutorotate"]
 - ["PSo16UIStateRestoring", "supportedInterfaceOrientations"]
 - !private ["PSo16UIStateRestoring", "view"]
@@ -749,6 +769,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "prepareForSegue"]
 - !private ["PSo18UITraitEnvironment", "presentScene"]
 - !private ["PSo18UITraitEnvironment", "scene"]
+- !private ["PSo18UITraitEnvironment", "score"]
 - ["PSo18UITraitEnvironment", "shouldAutorotate"]
 - !private ["PSo18UITraitEnvironment", "showsFPS"]
 - !private ["PSo18UITraitEnvironment", "showsNodeCount"]
@@ -770,6 +791,7 @@ depends-member:
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "GameOverViewController"]
 - ["CSo16UIViewController", "GameScene"]
+- !private ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "MainMenuViewController"]
 - ["CSo16UIViewController", "SKView"]
 - ["CSo16UIViewController", "UIButton"]
@@ -786,6 +808,7 @@ depends-member:
 - ["CSo16UIViewController", "menuViewController"]
 - ["CSo16UIViewController", "prefersStatusBarHidden"]
 - ["CSo16UIViewController", "prepareForSegue"]
+- !private ["CSo16UIViewController", "score"]
 - ["CSo16UIViewController", "shouldAutorotate"]
 - ["CSo16UIViewController", "supportedInterfaceOrientations"]
 - !private ["CSo16UIViewController", "view"]

@@ -116,11 +116,13 @@ SWIFT_CLASS("_TtC12PlatformGame11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
 @interface GameOverViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lblScore;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)actionRestartBtnPressed:(id _Nonnull)sender;
@@ -131,6 +133,7 @@ SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
 @class SKTextureAtlas;
 @class SKTexture;
 @class SKSpriteNode;
+@class SKLabelNode;
 @class SKView;
 @class UITouch;
 @class UIEvent;
@@ -140,6 +143,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic) BOOL isTouchingScreen;
 @property (nonatomic, strong) UIViewController * _Null_unspecified viewController;
+@property (nonatomic) NSInteger score;
 @property (nonatomic, readonly) uint32_t birdCategory;
 @property (nonatomic, readonly) uint32_t pipeCategory;
 @property (nonatomic, readonly, strong) SKTextureAtlas * _Nonnull birdAtlas;
@@ -157,6 +161,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @property (nonatomic) CGFloat pipeHeight;
 @property (nonatomic) BOOL start;
 @property (nonatomic) BOOL birdIsActive;
+@property (nonatomic, readonly, strong) SKLabelNode * _Nonnull scoreLabel;
 - (void)didMoveToView:(SKView * _Nonnull)view;
 - (void)update:(CFTimeInterval)currentTime;
 - (CGFloat)randomBetweenNumbers:(CGFloat)firstNum secondNum:(CGFloat)secondNum;
@@ -191,7 +196,6 @@ SWIFT_CLASS("_TtC12PlatformGame18GameViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
 @class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC12PlatformGame22MainMenuViewController")

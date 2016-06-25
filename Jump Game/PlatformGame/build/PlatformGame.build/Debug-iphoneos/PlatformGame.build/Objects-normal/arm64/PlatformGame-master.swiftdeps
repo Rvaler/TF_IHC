@@ -1,9 +1,9 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
 options: "5a446d8418233a623e15e682b54e1186"
-build_time: [518378813, 775798000]
+build_time: [520181532, 948972000]
 inputs:
   "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/MainMenuViewController.swift": [518377824, 0]
-  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameScene.swift": [518374658, 0]
-  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameViewController.swift": [518054564, 0]
-  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/AppDelegate.swift": [518190768, 0]
-  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameOverViewController.swift": [518378813, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameScene.swift": [520181235, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameViewController.swift": [520181484, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/AppDelegate.swift": [518536888, 0]
+  "/Users/rvaler/TF_IHC/Jump Game/PlatformGame/PlatformGame/GameOverViewController.swift": [520181532, 0]

@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C12PlatformGame22MainMenuViewController", ""]
 provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "lblGameIntro"
 - "actionStartBtnPressed"
 - "prepareForSegue"
 - "btnStartGame"
-- "lblGameIntro"
-- "viewDidLoad"
-- "didReceiveMemoryWarning"
 depends-top-level:
-- !private "GameViewController"
 - "AnyObject"
-- "UILabel"
-- !private "StringLiteralType"
-- "MainMenuViewController"
 - "NSLayoutConstraint"
-- "UIViewController"
-- !private "=="
 - "UIStoryboardSegue"
+- "UIViewController"
+- !private "StringLiteralType"
+- "UILabel"
+- !private "=="
+- !private "GameViewController"
+- "MainMenuViewController"
 depends-member:
 - ["Ps9AnyObject", "actionStartBtnPressed"]
 - ["Ps9AnyObject", "btnStartGame"]

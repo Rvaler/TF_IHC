@@ -14,11 +14,16 @@ protocol GameOverDelegate {
 
 class GameOverViewController: UIViewController {
     
+    var score: Int?
     var delegate: GameOverDelegate?
-
+    @IBOutlet weak var lblScore: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let score = score {
+            self.lblScore.text = "Score: \(score)"
+        }
+        
         // Do any additional setup after loading the view.
     }
 

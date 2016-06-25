@@ -12,6 +12,7 @@
             <string>PipeDream</string>
             <string>PipeDream</string>
             <string>PipeDream</string>
+            <string>PipeDream</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -33,7 +34,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Bird" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giX-Ko-Ubc">
                                 <rect key="frame" x="180" y="74" width="239" height="80.5"/>
                                 <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="72"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-nK-meP">
@@ -133,13 +134,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnM-Bb-S0r">
-                                <rect key="frame" x="142" y="83" width="315.5" height="71.5"/>
+                                <rect key="frame" x="142" y="47" width="315.5" height="71.5"/>
                                 <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="64"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3e-8g-SYY">
-                                <rect key="frame" x="191" y="436" width="219" height="59"/>
+                                <rect key="frame" x="191" y="441.5" width="219" height="59"/>
                                 <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="42"/>
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,14 +150,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemies" translatesAutoresizingMaskIntoConstraints="NO" id="BOI-Q8-TO4">
-                                <rect key="frame" x="217" y="199" width="167" height="207"/>
+                                <rect key="frame" x="217" y="205" width="167" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="207" id="OAZ-ke-7Fe"/>
                                     <constraint firstAttribute="width" constant="167" id="sv8-5q-AJc"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-tk-s0Q">
-                                <rect key="frame" x="239.5" y="503" width="121" height="39"/>
+                                <rect key="frame" x="239" y="508.5" width="121" height="39"/>
                                 <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="24"/>
                                 <state key="normal" title="Main Menu">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,22 +166,30 @@
                                     <segue destination="Wnt-em-DAQ" kind="show" id="cTU-Il-q9C"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-6O-qRk">
+                                <rect key="frame" x="254.5" y="144" width="92" height="27"/>
+                                <fontDescription key="fontDescription" name="PipeDream" family="Pipe Dream" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Iv9-nO-RwX" firstAttribute="leading" secondItem="UCV-an-t55" secondAttribute="leading" id="1Mg-yd-M9j"/>
+                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="1P8-Ee-DIR"/>
                             <constraint firstAttribute="trailing" secondItem="Iv9-nO-RwX" secondAttribute="trailing" id="1Th-00-XCi"/>
                             <constraint firstItem="gsk-tk-s0Q" firstAttribute="top" secondItem="l3e-8g-SYY" secondAttribute="bottom" constant="8" id="CWx-FH-syR"/>
                             <constraint firstItem="Iv9-nO-RwX" firstAttribute="top" secondItem="UCV-an-t55" secondAttribute="top" id="Dm4-qf-0RS"/>
+                            <constraint firstItem="BOI-Q8-TO4" firstAttribute="top" secondItem="GKz-6O-qRk" secondAttribute="bottom" constant="34" id="EDE-Wg-8TR"/>
                             <constraint firstItem="Iv9-nO-RwX" firstAttribute="leading" secondItem="KnM-Bb-S0r" secondAttribute="trailing" constant="-338" id="FdW-er-y2f"/>
                             <constraint firstItem="BOI-Q8-TO4" firstAttribute="leading" secondItem="Iv9-nO-RwX" secondAttribute="trailing" constant="-383" id="P4Z-QK-e1e"/>
                             <constraint firstItem="l3e-8g-SYY" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="T4n-kv-EUv"/>
-                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="UOg-wM-cJ4"/>
-                            <constraint firstItem="BOI-Q8-TO4" firstAttribute="top" secondItem="KnM-Bb-S0r" secondAttribute="bottom" constant="45" id="VNb-3s-HIs"/>
-                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="top" secondItem="3zL-KY-11T" secondAttribute="bottom" constant="63" id="X4n-gE-UUA"/>
+                            <constraint firstItem="GKz-6O-qRk" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="UDq-Eu-Yg1"/>
                             <constraint firstItem="gsk-tk-s0Q" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="aZ1-R2-nIc"/>
+                            <constraint firstItem="GKz-6O-qRk" firstAttribute="top" secondItem="KnM-Bb-S0r" secondAttribute="bottom" constant="25.5" id="feB-Co-xlh"/>
                             <constraint firstItem="gsk-tk-s0Q" firstAttribute="centerY" secondItem="Iv9-nO-RwX" secondAttribute="centerY" id="i2g-Xb-ucS"/>
                             <constraint firstItem="BOI-Q8-TO4" firstAttribute="centerX" secondItem="Iv9-nO-RwX" secondAttribute="centerX" id="lcY-kN-ZuJ"/>
+                            <constraint firstItem="KnM-Bb-S0r" firstAttribute="top" secondItem="3zL-KY-11T" secondAttribute="bottom" constant="27" id="mNT-E0-XIR"/>
                             <constraint firstItem="Fbq-Zz-9Z9" firstAttribute="top" secondItem="Iv9-nO-RwX" secondAttribute="bottom" id="nra-Pv-8GW"/>
                             <constraint firstItem="l3e-8g-SYY" firstAttribute="top" secondItem="BOI-Q8-TO4" secondAttribute="bottom" constant="29.5" id="qeu-XI-NMr"/>
                         </constraints>
@@ -193,6 +202,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="lblScore" destination="GKz-6O-qRk" id="ksj-SC-WdW"/>
                         <segue destination="LVB-YS-i5n" kind="show" identifier="segueRestartGame" id="ITr-p8-ckR"/>
                     </connections>
                 </viewController>

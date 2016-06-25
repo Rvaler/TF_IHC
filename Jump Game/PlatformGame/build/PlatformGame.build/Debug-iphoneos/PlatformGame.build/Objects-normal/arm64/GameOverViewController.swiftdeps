@@ -9,15 +9,19 @@ provides-member:
 - ["P12PlatformGame16GameOverDelegate", ""]
 - ["C12PlatformGame22GameOverViewController", ""]
 provides-dynamic-lookup:
-- "actionRestartBtnPressed"
+- "lblScore"
 - "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "actionRestartBtnPressed"
 depends-top-level:
-- "GameOverDelegate"
 - "AnyObject"
-- !private "BooleanLiteralType"
+- !private "StringLiteralType"
 - "GameOverViewController"
+- "Int"
 - "UIViewController"
+- "GameOverDelegate"
+- "UILabel"
+- !private "BooleanLiteralType"
 - "UIButton"
 depends-member:
 - ["Ps9AnyObject", "actionRestartBtnPressed"]
@@ -25,20 +29,33 @@ depends-member:
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "lblScore"]
+- ["Ps9AnyObject", "score"]
+- !private ["Ps9AnyObject", "text"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
+- !private ["Sb", "deinit"]
 - ["Ps11CVarArgType", "actionRestartBtnPressed"]
 - ["Ps11CVarArgType", "delegate"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "lblScore"]
+- ["Ps11CVarArgType", "score"]
+- !private ["Ps11CVarArgType", "text"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
 - ["Ps28CustomDebugStringConvertible", "actionRestartBtnPressed"]
 - ["Ps28CustomDebugStringConvertible", "delegate"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "lblScore"]
+- ["Ps28CustomDebugStringConvertible", "score"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "actionRestartBtnPressed"]
@@ -46,71 +63,122 @@ depends-member:
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "lblScore"]
+- ["Ps23CustomStringConvertible", "score"]
+- !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
 - ["Ps9Equatable", "actionRestartBtnPressed"]
 - ["Ps9Equatable", "delegate"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "dismissViewControllerAnimated"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "lblScore"]
+- ["Ps9Equatable", "score"]
+- !private ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
 - ["P12PlatformGame16GameOverDelegate", "GameOverViewController"]
 - ["P12PlatformGame16GameOverDelegate", "UIButton"]
 - ["P12PlatformGame16GameOverDelegate", "gameOverViewController"]
 - ["C12PlatformGame22GameOverViewController", "AnyObject"]
 - ["C12PlatformGame22GameOverViewController", "GameOverDelegate"]
+- ["C12PlatformGame22GameOverViewController", "Int"]
 - !private ["C12PlatformGame22GameOverViewController", "UIButton"]
+- ["C12PlatformGame22GameOverViewController", "UILabel"]
 - ["C12PlatformGame22GameOverViewController", "actionRestartBtnPressed"]
 - ["C12PlatformGame22GameOverViewController", "deinit"]
 - ["C12PlatformGame22GameOverViewController", "delegate"]
 - ["C12PlatformGame22GameOverViewController", "didReceiveMemoryWarning"]
 - !private ["C12PlatformGame22GameOverViewController", "dismissViewControllerAnimated"]
 - ["C12PlatformGame22GameOverViewController", "init"]
+- ["C12PlatformGame22GameOverViewController", "lblScore"]
+- ["C12PlatformGame22GameOverViewController", "score"]
 - ["C12PlatformGame22GameOverViewController", "viewDidLoad"]
 - ["Ps8Hashable", "actionRestartBtnPressed"]
 - ["Ps8Hashable", "delegate"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "dismissViewControllerAnimated"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "lblScore"]
+- ["Ps8Hashable", "score"]
+- !private ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps14MirrorPathType", "init"]
 - ["PSo8NSCoding", "actionRestartBtnPressed"]
 - ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "lblScore"]
+- ["PSo8NSCoding", "score"]
+- !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
 - ["PSo26NSExtensionRequestHandling", "actionRestartBtnPressed"]
 - ["PSo26NSExtensionRequestHandling", "delegate"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "lblScore"]
+- ["PSo26NSExtensionRequestHandling", "score"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "GameOverDelegate"]
+- ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "actionRestartBtnPressed"]
 - ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "lblScore"]
+- ["CSo8NSObject", "score"]
+- !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "actionRestartBtnPressed"]
 - ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "lblScore"]
+- ["PSo16NSObjectProtocol", "score"]
+- !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
 - !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps10Streamable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "text"]
 - ["PSo21UIAppearanceContainer", "actionRestartBtnPressed"]
 - ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "lblScore"]
+- ["PSo21UIAppearanceContainer", "score"]
+- !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
 - ["PSo18UIContentContainer", "actionRestartBtnPressed"]
@@ -118,29 +186,44 @@ depends-member:
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "lblScore"]
+- ["PSo18UIContentContainer", "score"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
 - ["PSo18UIFocusEnvironment", "actionRestartBtnPressed"]
 - ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "lblScore"]
+- ["PSo18UIFocusEnvironment", "score"]
+- !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "GameOverDelegate"]
+- ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "actionRestartBtnPressed"]
 - ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "lblScore"]
+- ["CSo11UIResponder", "score"]
+- !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "actionRestartBtnPressed"]
 - ["PSo16UIStateRestoring", "delegate"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "lblScore"]
+- ["PSo16UIStateRestoring", "score"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - ["PSo18UITraitEnvironment", "actionRestartBtnPressed"]
@@ -148,39 +231,103 @@ depends-member:
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "lblScore"]
+- ["PSo18UITraitEnvironment", "score"]
+- !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "GameOverDelegate"]
+- ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "actionRestartBtnPressed"]
 - ["CSo16UIViewController", "delegate"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "lblScore"]
+- ["CSo16UIViewController", "score"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "text"]
 depends-nominal:
 - "Ps9AnyObject"
+- !private "Sb"
 - "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- !private "Sd"
 - "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
 - "P12PlatformGame16GameOverDelegate"
 - "C12PlatformGame22GameOverViewController"
 - "Ps8Hashable"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps14MirrorPathType"
 - "PSo8NSCoding"
+- !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "Sq"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps16OutputStreamType"
+- !private "Ps10Streamable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
+- !private "CSo7UILabel"
 - "CSo11UIResponder"
 - "PSo16UIStateRestoring"
 - "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
@@ -194,4 +341,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "1d13e3fbe5cbb021b73fcaea53a9f23f"
+interface-hash: "7cb36629f551abc9aaffdbd903a17150"

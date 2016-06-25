@@ -6,72 +6,79 @@ provides-nominal:
 provides-member:
 - ["C12PlatformGame9GameScene", ""]
 provides-dynamic-lookup:
-- "myPipesTexture"
-- "bird"
-- "myFloor2"
-- "didMoveToView"
-- "birdCategory"
-- "topPipe1"
-- "birdIsActive"
-- "topPipe2"
+- "randomBetweenNumbers"
 - "birdAtlas"
-- "pipeHeight"
+- "bird"
 - "bottomPipe1"
-- "myFloor1"
-- "isTouchingScreen"
+- "pipeHeight"
 - "touchesBegan"
+- "myPipesTexture"
+- "topPipe2"
+- "score"
+- "myFloor1"
+- "didBeginContact"
+- "scoreLabel"
+- "didMoveToView"
+- "tutorialImage"
 - "bottomPipe2"
 - "pipeCategory"
 - "birdSprites"
-- "randomBetweenNumbers"
-- "didBeginContact"
+- "update"
+- "myBackground"
+- "start"
 - "viewController"
 - "touchesEnded"
-- "tutorialImage"
-- "start"
-- "update"
+- "myFloor2"
+- "birdIsActive"
 - "createBirdPhysics"
-- "myBackground"
+- "birdCategory"
+- "isTouchingScreen"
+- "topPipe1"
 depends-top-level:
-- "SKView"
-- !private "/"
-- !private "SKColor"
 - "CGFloat"
-- "GameScene"
-- !private "-"
-- !private "SKPhysicsBody"
-- !private "CGRectGetMidY"
-- !private "UINT32_MAX"
-- "UITouch"
 - "UIViewController"
-- !private "CGPointZero"
-- !private "CGVectorMake"
-- !private "print"
-- !private "min"
-- !private "SKAction"
-- !private "arc4random"
-- "UInt32"
-- "<<"
-- "SKPhysicsContactDelegate"
 - "SKScene"
-- "SKTextureAtlas"
-- "StringLiteralType"
-- "SKSpriteNode"
-- !private "CGVector"
-- "Bool"
-- "Set"
 - !private "CGPoint"
-- !private "<"
-- "BooleanLiteralType"
-- !private "+"
-- "UIEvent"
-- "SKPhysicsContact"
-- "CFTimeInterval"
-- !private "CGPointMake"
-- !private "*"
+- "SKPhysicsContactDelegate"
+- !private "+="
 - !private "abs"
-- "SKTexture"
+- "SKSpriteNode"
+- "UITouch"
+- !private "SKColor"
+- "Int"
+- "SKTextureAtlas"
+- !private "*"
+- !private "UIColor"
+- "StringLiteralType"
+- "SKLabelNode"
+- !private "/"
+- !private "CGRectGetMidY"
+- "GameScene"
+- !private "UnicodeScalarType"
+- !private "SKAction"
+- !private "<"
+- !private "print"
+- !private "CGPointMake"
+- "Bool"
+- !private "-"
+- "<<"
+- !private "UINT32_MAX"
 - "Array"
+- "SKTexture"
+- !private "min"
+- !private "CGVector"
+- !private "arc4random"
+- "CFTimeInterval"
+- "UInt32"
+- "SKPhysicsContact"
+- "SKView"
+- !private "+"
+- "BooleanLiteralType"
+- "UIEvent"
+- !private "CGVectorMake"
+- !private "SKPhysicsBody"
+- !private "CGPointZero"
+- "Set"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -87,10 +94,12 @@ depends-member:
 - !private ["Ps9AnyObject", "CGVectorMake"]
 - !private ["Ps9AnyObject", "SKAction"]
 - !private ["Ps9AnyObject", "SKColor"]
+- ["Ps9AnyObject", "SKLabelNode"]
 - !private ["Ps9AnyObject", "SKPhysicsBody"]
 - ["Ps9AnyObject", "SKSpriteNode"]
 - ["Ps9AnyObject", "SKTexture"]
 - ["Ps9AnyObject", "SKTextureAtlas"]
+- !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UINT32_MAX"]
 - !private ["Ps9AnyObject", "abs"]
 - !private ["Ps9AnyObject", "addChild"]
@@ -105,6 +114,7 @@ depends-member:
 - ["Ps9AnyObject", "birdCategory"]
 - ["Ps9AnyObject", "birdIsActive"]
 - ["Ps9AnyObject", "birdSprites"]
+- !private ["Ps9AnyObject", "blackColor"]
 - ["Ps9AnyObject", "bottomPipe1"]
 - ["Ps9AnyObject", "bottomPipe2"]
 - !private ["Ps9AnyObject", "categoryBitMask"]
@@ -115,6 +125,9 @@ depends-member:
 - ["Ps9AnyObject", "didEndContact"]
 - ["Ps9AnyObject", "didMoveToView"]
 - !private ["Ps9AnyObject", "dynamic"]
+- !private ["Ps9AnyObject", "fontColor"]
+- !private ["Ps9AnyObject", "fontName"]
+- !private ["Ps9AnyObject", "fontSize"]
 - !private ["Ps9AnyObject", "frame"]
 - !private ["Ps9AnyObject", "hidden"]
 - ["Ps9AnyObject", "init"]
@@ -133,11 +146,15 @@ depends-member:
 - !private ["Ps9AnyObject", "position"]
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "randomBetweenNumbers"]
+- !private ["Ps9AnyObject", "removeAllChildren"]
 - !private ["Ps9AnyObject", "repeatActionForever"]
 - !private ["Ps9AnyObject", "restitution"]
 - !private ["Ps9AnyObject", "runAction"]
+- ["Ps9AnyObject", "score"]
+- ["Ps9AnyObject", "scoreLabel"]
 - !private ["Ps9AnyObject", "size"]
 - ["Ps9AnyObject", "start"]
+- !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textureNamed"]
 - ["Ps9AnyObject", "topPipe1"]
 - ["Ps9AnyObject", "topPipe2"]
@@ -171,6 +188,7 @@ depends-member:
 - ["Ps21BitwiseOperationsType", "Distance"]
 - ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - ["Sb", "init"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - ["Ps25BooleanLiteralConvertible", "init"]
@@ -202,11 +220,13 @@ depends-member:
 - ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "SKAction"]
 - !private ["Ps11CVarArgType", "SKColor"]
+- ["Ps11CVarArgType", "SKLabelNode"]
 - !private ["Ps11CVarArgType", "SKPhysicsBody"]
 - ["Ps11CVarArgType", "SKSpriteNode"]
 - ["Ps11CVarArgType", "SKTexture"]
 - ["Ps11CVarArgType", "SKTextureAtlas"]
 - !private ["Ps11CVarArgType", "Stride"]
+- !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UINT32_MAX"]
 - !private ["Ps11CVarArgType", "abs"]
 - !private ["Ps11CVarArgType", "addChild"]
@@ -221,6 +241,7 @@ depends-member:
 - ["Ps11CVarArgType", "birdCategory"]
 - ["Ps11CVarArgType", "birdIsActive"]
 - ["Ps11CVarArgType", "birdSprites"]
+- !private ["Ps11CVarArgType", "blackColor"]
 - ["Ps11CVarArgType", "bottomPipe1"]
 - ["Ps11CVarArgType", "bottomPipe2"]
 - !private ["Ps11CVarArgType", "categoryBitMask"]
@@ -231,6 +252,9 @@ depends-member:
 - ["Ps11CVarArgType", "didEndContact"]
 - ["Ps11CVarArgType", "didMoveToView"]
 - !private ["Ps11CVarArgType", "dynamic"]
+- !private ["Ps11CVarArgType", "fontColor"]
+- !private ["Ps11CVarArgType", "fontName"]
+- !private ["Ps11CVarArgType", "fontSize"]
 - !private ["Ps11CVarArgType", "frame"]
 - !private ["Ps11CVarArgType", "hidden"]
 - ["Ps11CVarArgType", "init"]
@@ -249,11 +273,15 @@ depends-member:
 - !private ["Ps11CVarArgType", "position"]
 - !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "randomBetweenNumbers"]
+- !private ["Ps11CVarArgType", "removeAllChildren"]
 - !private ["Ps11CVarArgType", "repeatActionForever"]
 - !private ["Ps11CVarArgType", "restitution"]
 - !private ["Ps11CVarArgType", "runAction"]
+- ["Ps11CVarArgType", "score"]
+- ["Ps11CVarArgType", "scoreLabel"]
 - !private ["Ps11CVarArgType", "size"]
 - ["Ps11CVarArgType", "start"]
+- !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textureNamed"]
 - ["Ps11CVarArgType", "topPipe1"]
 - ["Ps11CVarArgType", "topPipe2"]
@@ -264,6 +292,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "velocity"]
 - ["Ps11CVarArgType", "viewController"]
 - ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
 - ["Ps14CollectionType", "Generator"]
 - ["Ps14CollectionType", "Index"]
 - ["Ps14CollectionType", "SubSequence"]
@@ -288,11 +317,13 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "SKAction"]
 - !private ["Ps28CustomDebugStringConvertible", "SKColor"]
+- ["Ps28CustomDebugStringConvertible", "SKLabelNode"]
 - !private ["Ps28CustomDebugStringConvertible", "SKPhysicsBody"]
 - ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
 - ["Ps28CustomDebugStringConvertible", "SKTexture"]
 - ["Ps28CustomDebugStringConvertible", "SKTextureAtlas"]
 - ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UINT32_MAX"]
 - ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "abs"]
@@ -309,6 +340,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "birdCategory"]
 - ["Ps28CustomDebugStringConvertible", "birdIsActive"]
 - ["Ps28CustomDebugStringConvertible", "birdSprites"]
+- !private ["Ps28CustomDebugStringConvertible", "blackColor"]
 - ["Ps28CustomDebugStringConvertible", "bottomPipe1"]
 - ["Ps28CustomDebugStringConvertible", "bottomPipe2"]
 - !private ["Ps28CustomDebugStringConvertible", "categoryBitMask"]
@@ -319,6 +351,9 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "didEndContact"]
 - ["Ps28CustomDebugStringConvertible", "didMoveToView"]
 - !private ["Ps28CustomDebugStringConvertible", "dynamic"]
+- !private ["Ps28CustomDebugStringConvertible", "fontColor"]
+- !private ["Ps28CustomDebugStringConvertible", "fontName"]
+- !private ["Ps28CustomDebugStringConvertible", "fontSize"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -337,12 +372,16 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "position"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "randomBetweenNumbers"]
+- !private ["Ps28CustomDebugStringConvertible", "removeAllChildren"]
 - !private ["Ps28CustomDebugStringConvertible", "repeatActionForever"]
 - !private ["Ps28CustomDebugStringConvertible", "restitution"]
 - !private ["Ps28CustomDebugStringConvertible", "runAction"]
+- ["Ps28CustomDebugStringConvertible", "score"]
+- ["Ps28CustomDebugStringConvertible", "scoreLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
 - ["Ps28CustomDebugStringConvertible", "start"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "textureNamed"]
 - ["Ps28CustomDebugStringConvertible", "topPipe1"]
 - ["Ps28CustomDebugStringConvertible", "topPipe2"]
@@ -368,12 +407,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "SKAction"]
 - !private ["Ps23CustomStringConvertible", "SKColor"]
+- ["Ps23CustomStringConvertible", "SKLabelNode"]
 - !private ["Ps23CustomStringConvertible", "SKPhysicsBody"]
 - ["Ps23CustomStringConvertible", "SKSpriteNode"]
 - ["Ps23CustomStringConvertible", "SKTexture"]
 - ["Ps23CustomStringConvertible", "SKTextureAtlas"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UINT32_MAX"]
 - ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -391,6 +432,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "birdCategory"]
 - ["Ps23CustomStringConvertible", "birdIsActive"]
 - ["Ps23CustomStringConvertible", "birdSprites"]
+- !private ["Ps23CustomStringConvertible", "blackColor"]
 - ["Ps23CustomStringConvertible", "bottomPipe1"]
 - ["Ps23CustomStringConvertible", "bottomPipe2"]
 - !private ["Ps23CustomStringConvertible", "categoryBitMask"]
@@ -401,6 +443,9 @@ depends-member:
 - ["Ps23CustomStringConvertible", "didEndContact"]
 - ["Ps23CustomStringConvertible", "didMoveToView"]
 - !private ["Ps23CustomStringConvertible", "dynamic"]
+- !private ["Ps23CustomStringConvertible", "fontColor"]
+- !private ["Ps23CustomStringConvertible", "fontName"]
+- !private ["Ps23CustomStringConvertible", "fontSize"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -419,12 +464,16 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "position"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "randomBetweenNumbers"]
+- !private ["Ps23CustomStringConvertible", "removeAllChildren"]
 - !private ["Ps23CustomStringConvertible", "repeatActionForever"]
 - !private ["Ps23CustomStringConvertible", "restitution"]
 - !private ["Ps23CustomStringConvertible", "runAction"]
+- ["Ps23CustomStringConvertible", "score"]
+- ["Ps23CustomStringConvertible", "scoreLabel"]
 - !private ["Ps23CustomStringConvertible", "size"]
 - ["Ps23CustomStringConvertible", "start"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "textureNamed"]
 - ["Ps23CustomStringConvertible", "topPipe1"]
 - ["Ps23CustomStringConvertible", "topPipe2"]
@@ -449,11 +498,13 @@ depends-member:
 - ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "SKAction"]
 - !private ["Ps9Equatable", "SKColor"]
+- ["Ps9Equatable", "SKLabelNode"]
 - !private ["Ps9Equatable", "SKPhysicsBody"]
 - ["Ps9Equatable", "SKSpriteNode"]
 - ["Ps9Equatable", "SKTexture"]
 - ["Ps9Equatable", "SKTextureAtlas"]
 - !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UINT32_MAX"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "abs"]
@@ -469,6 +520,7 @@ depends-member:
 - ["Ps9Equatable", "birdCategory"]
 - ["Ps9Equatable", "birdIsActive"]
 - ["Ps9Equatable", "birdSprites"]
+- !private ["Ps9Equatable", "blackColor"]
 - ["Ps9Equatable", "bottomPipe1"]
 - ["Ps9Equatable", "bottomPipe2"]
 - !private ["Ps9Equatable", "categoryBitMask"]
@@ -479,6 +531,9 @@ depends-member:
 - ["Ps9Equatable", "didEndContact"]
 - ["Ps9Equatable", "didMoveToView"]
 - !private ["Ps9Equatable", "dynamic"]
+- !private ["Ps9Equatable", "fontColor"]
+- !private ["Ps9Equatable", "fontName"]
+- !private ["Ps9Equatable", "fontSize"]
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "height"]
 - !private ["Ps9Equatable", "hidden"]
@@ -498,11 +553,15 @@ depends-member:
 - !private ["Ps9Equatable", "position"]
 - !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "randomBetweenNumbers"]
+- !private ["Ps9Equatable", "removeAllChildren"]
 - !private ["Ps9Equatable", "repeatActionForever"]
 - !private ["Ps9Equatable", "restitution"]
 - !private ["Ps9Equatable", "runAction"]
+- ["Ps9Equatable", "score"]
+- ["Ps9Equatable", "scoreLabel"]
 - !private ["Ps9Equatable", "size"]
 - ["Ps9Equatable", "start"]
+- !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textureNamed"]
 - ["Ps9Equatable", "topPipe1"]
 - ["Ps9Equatable", "topPipe2"]
@@ -516,6 +575,7 @@ depends-member:
 - !private ["Ps9Equatable", "x"]
 - !private ["Ps9Equatable", "y"]
 - ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
 - !private ["Ps23FloatLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps23FloatLiteralConvertible", "Stride"]
@@ -535,8 +595,10 @@ depends-member:
 - !private ["C12PlatformGame9GameScene", "CGRectGetMidY"]
 - !private ["C12PlatformGame9GameScene", "CGVector"]
 - !private ["C12PlatformGame9GameScene", "CGVectorMake"]
+- ["C12PlatformGame9GameScene", "Int"]
 - !private ["C12PlatformGame9GameScene", "SKAction"]
 - !private ["C12PlatformGame9GameScene", "SKColor"]
+- ["C12PlatformGame9GameScene", "SKLabelNode"]
 - !private ["C12PlatformGame9GameScene", "SKPhysicsBody"]
 - ["C12PlatformGame9GameScene", "SKPhysicsContact"]
 - ["C12PlatformGame9GameScene", "SKSpriteNode"]
@@ -544,6 +606,7 @@ depends-member:
 - ["C12PlatformGame9GameScene", "SKTextureAtlas"]
 - ["C12PlatformGame9GameScene", "SKView"]
 - ["C12PlatformGame9GameScene", "Set"]
+- !private ["C12PlatformGame9GameScene", "UIColor"]
 - ["C12PlatformGame9GameScene", "UIEvent"]
 - !private ["C12PlatformGame9GameScene", "UINT32_MAX"]
 - ["C12PlatformGame9GameScene", "UITouch"]
@@ -579,6 +642,9 @@ depends-member:
 - ["C12PlatformGame9GameScene", "pipeHeight"]
 - !private ["C12PlatformGame9GameScene", "print"]
 - ["C12PlatformGame9GameScene", "randomBetweenNumbers"]
+- !private ["C12PlatformGame9GameScene", "removeAllChildren"]
+- ["C12PlatformGame9GameScene", "score"]
+- ["C12PlatformGame9GameScene", "scoreLabel"]
 - ["C12PlatformGame9GameScene", "start"]
 - ["C12PlatformGame9GameScene", "topPipe1"]
 - ["C12PlatformGame9GameScene", "topPipe2"]
@@ -601,11 +667,13 @@ depends-member:
 - ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "SKAction"]
 - !private ["Ps8Hashable", "SKColor"]
+- ["Ps8Hashable", "SKLabelNode"]
 - !private ["Ps8Hashable", "SKPhysicsBody"]
 - ["Ps8Hashable", "SKSpriteNode"]
 - ["Ps8Hashable", "SKTexture"]
 - ["Ps8Hashable", "SKTextureAtlas"]
 - !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UINT32_MAX"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "abs"]
@@ -621,6 +689,7 @@ depends-member:
 - ["Ps8Hashable", "birdCategory"]
 - ["Ps8Hashable", "birdIsActive"]
 - ["Ps8Hashable", "birdSprites"]
+- !private ["Ps8Hashable", "blackColor"]
 - ["Ps8Hashable", "bottomPipe1"]
 - ["Ps8Hashable", "bottomPipe2"]
 - !private ["Ps8Hashable", "categoryBitMask"]
@@ -631,6 +700,9 @@ depends-member:
 - ["Ps8Hashable", "didEndContact"]
 - ["Ps8Hashable", "didMoveToView"]
 - !private ["Ps8Hashable", "dynamic"]
+- !private ["Ps8Hashable", "fontColor"]
+- !private ["Ps8Hashable", "fontName"]
+- !private ["Ps8Hashable", "fontSize"]
 - !private ["Ps8Hashable", "frame"]
 - !private ["Ps8Hashable", "hidden"]
 - ["Ps8Hashable", "init"]
@@ -649,11 +721,15 @@ depends-member:
 - !private ["Ps8Hashable", "position"]
 - !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "randomBetweenNumbers"]
+- !private ["Ps8Hashable", "removeAllChildren"]
 - !private ["Ps8Hashable", "repeatActionForever"]
 - !private ["Ps8Hashable", "restitution"]
 - !private ["Ps8Hashable", "runAction"]
+- ["Ps8Hashable", "score"]
+- ["Ps8Hashable", "scoreLabel"]
 - !private ["Ps8Hashable", "size"]
 - ["Ps8Hashable", "start"]
+- !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textureNamed"]
 - ["Ps8Hashable", "topPipe1"]
 - ["Ps8Hashable", "topPipe2"]
@@ -674,7 +750,11 @@ depends-member:
 - ["Vs17IndexingGenerator", "Element"]
 - ["Si", "Distance"]
 - ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
 - ["Ps21IntegerArithmeticType", "Distance"]
 - ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - ["Ps25IntegerLiteralConvertible", "Distance"]
@@ -685,6 +765,7 @@ depends-member:
 - ["Ps11IntegerType", "IntegerLiteralType"]
 - ["Ps14MirrorPathType", "Distance"]
 - ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
 - ["Ps21MutableCollectionType", "Generator"]
 - ["Ps21MutableCollectionType", "Index"]
 - ["Ps21MutableCollectionType", "SubSequence"]
@@ -717,10 +798,12 @@ depends-member:
 - !private ["PSo8NSCoding", "CGVectorMake"]
 - !private ["PSo8NSCoding", "SKAction"]
 - !private ["PSo8NSCoding", "SKColor"]
+- ["PSo8NSCoding", "SKLabelNode"]
 - !private ["PSo8NSCoding", "SKPhysicsBody"]
 - ["PSo8NSCoding", "SKSpriteNode"]
 - ["PSo8NSCoding", "SKTexture"]
 - ["PSo8NSCoding", "SKTextureAtlas"]
+- !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UINT32_MAX"]
 - !private ["PSo8NSCoding", "abs"]
 - !private ["PSo8NSCoding", "addChild"]
@@ -735,6 +818,7 @@ depends-member:
 - ["PSo8NSCoding", "birdCategory"]
 - ["PSo8NSCoding", "birdIsActive"]
 - ["PSo8NSCoding", "birdSprites"]
+- !private ["PSo8NSCoding", "blackColor"]
 - ["PSo8NSCoding", "bottomPipe1"]
 - ["PSo8NSCoding", "bottomPipe2"]
 - !private ["PSo8NSCoding", "categoryBitMask"]
@@ -745,6 +829,9 @@ depends-member:
 - ["PSo8NSCoding", "didEndContact"]
 - ["PSo8NSCoding", "didMoveToView"]
 - !private ["PSo8NSCoding", "dynamic"]
+- !private ["PSo8NSCoding", "fontColor"]
+- !private ["PSo8NSCoding", "fontName"]
+- !private ["PSo8NSCoding", "fontSize"]
 - !private ["PSo8NSCoding", "frame"]
 - !private ["PSo8NSCoding", "hidden"]
 - ["PSo8NSCoding", "init"]
@@ -763,11 +850,15 @@ depends-member:
 - !private ["PSo8NSCoding", "position"]
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "randomBetweenNumbers"]
+- !private ["PSo8NSCoding", "removeAllChildren"]
 - !private ["PSo8NSCoding", "repeatActionForever"]
 - !private ["PSo8NSCoding", "restitution"]
 - !private ["PSo8NSCoding", "runAction"]
+- ["PSo8NSCoding", "score"]
+- ["PSo8NSCoding", "scoreLabel"]
 - !private ["PSo8NSCoding", "size"]
 - ["PSo8NSCoding", "start"]
+- !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textureNamed"]
 - ["PSo8NSCoding", "topPipe1"]
 - ["PSo8NSCoding", "topPipe2"]
@@ -789,10 +880,12 @@ depends-member:
 - !private ["PSo9NSCopying", "CGVectorMake"]
 - !private ["PSo9NSCopying", "SKAction"]
 - !private ["PSo9NSCopying", "SKColor"]
+- ["PSo9NSCopying", "SKLabelNode"]
 - !private ["PSo9NSCopying", "SKPhysicsBody"]
 - ["PSo9NSCopying", "SKSpriteNode"]
 - ["PSo9NSCopying", "SKTexture"]
 - ["PSo9NSCopying", "SKTextureAtlas"]
+- !private ["PSo9NSCopying", "UIColor"]
 - !private ["PSo9NSCopying", "UINT32_MAX"]
 - !private ["PSo9NSCopying", "abs"]
 - !private ["PSo9NSCopying", "addChild"]
@@ -807,6 +900,7 @@ depends-member:
 - ["PSo9NSCopying", "birdCategory"]
 - ["PSo9NSCopying", "birdIsActive"]
 - ["PSo9NSCopying", "birdSprites"]
+- !private ["PSo9NSCopying", "blackColor"]
 - ["PSo9NSCopying", "bottomPipe1"]
 - ["PSo9NSCopying", "bottomPipe2"]
 - !private ["PSo9NSCopying", "categoryBitMask"]
@@ -816,6 +910,9 @@ depends-member:
 - ["PSo9NSCopying", "didEndContact"]
 - ["PSo9NSCopying", "didMoveToView"]
 - !private ["PSo9NSCopying", "dynamic"]
+- !private ["PSo9NSCopying", "fontColor"]
+- !private ["PSo9NSCopying", "fontName"]
+- !private ["PSo9NSCopying", "fontSize"]
 - !private ["PSo9NSCopying", "frame"]
 - !private ["PSo9NSCopying", "hidden"]
 - ["PSo9NSCopying", "init"]
@@ -833,11 +930,15 @@ depends-member:
 - !private ["PSo9NSCopying", "position"]
 - !private ["PSo9NSCopying", "print"]
 - ["PSo9NSCopying", "randomBetweenNumbers"]
+- !private ["PSo9NSCopying", "removeAllChildren"]
 - !private ["PSo9NSCopying", "repeatActionForever"]
 - !private ["PSo9NSCopying", "restitution"]
 - !private ["PSo9NSCopying", "runAction"]
+- ["PSo9NSCopying", "score"]
+- ["PSo9NSCopying", "scoreLabel"]
 - !private ["PSo9NSCopying", "size"]
 - ["PSo9NSCopying", "start"]
+- !private ["PSo9NSCopying", "text"]
 - ["PSo9NSCopying", "topPipe1"]
 - ["PSo9NSCopying", "topPipe2"]
 - ["PSo9NSCopying", "touchesBegan"]
@@ -848,6 +949,7 @@ depends-member:
 - ["PSo9NSCopying", "viewController"]
 - ["PSo9NSCopying", ""]
 - !private ["PSo26NSExtensionRequestHandling", "performSegueWithIdentifier"]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Array"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "CFTimeInterval"]
@@ -858,8 +960,10 @@ depends-member:
 - !private ["CSo8NSObject", "CGRectGetMidY"]
 - !private ["CSo8NSObject", "CGVector"]
 - !private ["CSo8NSObject", "CGVectorMake"]
+- ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "SKAction"]
 - !private ["CSo8NSObject", "SKColor"]
+- ["CSo8NSObject", "SKLabelNode"]
 - !private ["CSo8NSObject", "SKPhysicsBody"]
 - ["CSo8NSObject", "SKPhysicsContact"]
 - ["CSo8NSObject", "SKSpriteNode"]
@@ -867,6 +971,7 @@ depends-member:
 - ["CSo8NSObject", "SKTextureAtlas"]
 - ["CSo8NSObject", "SKView"]
 - ["CSo8NSObject", "Set"]
+- !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UIEvent"]
 - !private ["CSo8NSObject", "UINT32_MAX"]
 - ["CSo8NSObject", "UITouch"]
@@ -885,6 +990,7 @@ depends-member:
 - ["CSo8NSObject", "birdCategory"]
 - ["CSo8NSObject", "birdIsActive"]
 - ["CSo8NSObject", "birdSprites"]
+- !private ["CSo8NSObject", "blackColor"]
 - ["CSo8NSObject", "bottomPipe1"]
 - ["CSo8NSObject", "bottomPipe2"]
 - !private ["CSo8NSObject", "categoryBitMask"]
@@ -895,6 +1001,9 @@ depends-member:
 - ["CSo8NSObject", "didEndContact"]
 - ["CSo8NSObject", "didMoveToView"]
 - !private ["CSo8NSObject", "dynamic"]
+- !private ["CSo8NSObject", "fontColor"]
+- !private ["CSo8NSObject", "fontName"]
+- !private ["CSo8NSObject", "fontSize"]
 - !private ["CSo8NSObject", "frame"]
 - !private ["CSo8NSObject", "hidden"]
 - ["CSo8NSObject", "init"]
@@ -913,11 +1022,15 @@ depends-member:
 - !private ["CSo8NSObject", "position"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "randomBetweenNumbers"]
+- !private ["CSo8NSObject", "removeAllChildren"]
 - !private ["CSo8NSObject", "repeatActionForever"]
 - !private ["CSo8NSObject", "restitution"]
 - !private ["CSo8NSObject", "runAction"]
+- ["CSo8NSObject", "score"]
+- ["CSo8NSObject", "scoreLabel"]
 - !private ["CSo8NSObject", "size"]
 - ["CSo8NSObject", "start"]
+- !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textureNamed"]
 - ["CSo8NSObject", "topPipe1"]
 - ["CSo8NSObject", "topPipe2"]
@@ -938,10 +1051,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGVectorMake"]
 - !private ["PSo16NSObjectProtocol", "SKAction"]
 - !private ["PSo16NSObjectProtocol", "SKColor"]
+- ["PSo16NSObjectProtocol", "SKLabelNode"]
 - !private ["PSo16NSObjectProtocol", "SKPhysicsBody"]
 - ["PSo16NSObjectProtocol", "SKSpriteNode"]
 - ["PSo16NSObjectProtocol", "SKTexture"]
 - ["PSo16NSObjectProtocol", "SKTextureAtlas"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UINT32_MAX"]
 - !private ["PSo16NSObjectProtocol", "abs"]
 - !private ["PSo16NSObjectProtocol", "addChild"]
@@ -956,6 +1071,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "birdCategory"]
 - ["PSo16NSObjectProtocol", "birdIsActive"]
 - ["PSo16NSObjectProtocol", "birdSprites"]
+- !private ["PSo16NSObjectProtocol", "blackColor"]
 - ["PSo16NSObjectProtocol", "bottomPipe1"]
 - ["PSo16NSObjectProtocol", "bottomPipe2"]
 - !private ["PSo16NSObjectProtocol", "categoryBitMask"]
@@ -966,6 +1082,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", "didEndContact"]
 - ["PSo16NSObjectProtocol", "didMoveToView"]
 - !private ["PSo16NSObjectProtocol", "dynamic"]
+- !private ["PSo16NSObjectProtocol", "fontColor"]
+- !private ["PSo16NSObjectProtocol", "fontName"]
+- !private ["PSo16NSObjectProtocol", "fontSize"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -984,11 +1103,15 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "position"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "randomBetweenNumbers"]
+- !private ["PSo16NSObjectProtocol", "removeAllChildren"]
 - !private ["PSo16NSObjectProtocol", "repeatActionForever"]
 - !private ["PSo16NSObjectProtocol", "restitution"]
 - !private ["PSo16NSObjectProtocol", "runAction"]
+- ["PSo16NSObjectProtocol", "score"]
+- ["PSo16NSObjectProtocol", "scoreLabel"]
 - !private ["PSo16NSObjectProtocol", "size"]
 - ["PSo16NSObjectProtocol", "start"]
+- !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textureNamed"]
 - ["PSo16NSObjectProtocol", "topPipe1"]
 - ["PSo16NSObjectProtocol", "topPipe2"]
@@ -999,7 +1122,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "velocity"]
 - ["PSo16NSObjectProtocol", "viewController"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "blackColor"]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
 - ["Ps21RandomAccessIndexType", "Distance"]
 - ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Vs5Range", "deinit"]
@@ -1022,8 +1149,10 @@ depends-member:
 - !private ["CSo12SKEffectNode", "CGRectGetMidY"]
 - !private ["CSo12SKEffectNode", "CGVector"]
 - !private ["CSo12SKEffectNode", "CGVectorMake"]
+- ["CSo12SKEffectNode", "Int"]
 - !private ["CSo12SKEffectNode", "SKAction"]
 - !private ["CSo12SKEffectNode", "SKColor"]
+- ["CSo12SKEffectNode", "SKLabelNode"]
 - !private ["CSo12SKEffectNode", "SKPhysicsBody"]
 - ["CSo12SKEffectNode", "SKPhysicsContact"]
 - ["CSo12SKEffectNode", "SKSpriteNode"]
@@ -1031,6 +1160,7 @@ depends-member:
 - ["CSo12SKEffectNode", "SKTextureAtlas"]
 - ["CSo12SKEffectNode", "SKView"]
 - ["CSo12SKEffectNode", "Set"]
+- !private ["CSo12SKEffectNode", "UIColor"]
 - ["CSo12SKEffectNode", "UIEvent"]
 - !private ["CSo12SKEffectNode", "UINT32_MAX"]
 - ["CSo12SKEffectNode", "UITouch"]
@@ -1065,6 +1195,9 @@ depends-member:
 - ["CSo12SKEffectNode", "pipeHeight"]
 - !private ["CSo12SKEffectNode", "print"]
 - ["CSo12SKEffectNode", "randomBetweenNumbers"]
+- !private ["CSo12SKEffectNode", "removeAllChildren"]
+- ["CSo12SKEffectNode", "score"]
+- ["CSo12SKEffectNode", "scoreLabel"]
 - ["CSo12SKEffectNode", "start"]
 - ["CSo12SKEffectNode", "topPipe1"]
 - ["CSo12SKEffectNode", "topPipe2"]
@@ -1073,6 +1206,12 @@ depends-member:
 - ["CSo12SKEffectNode", "tutorialImage"]
 - ["CSo12SKEffectNode", "update"]
 - ["CSo12SKEffectNode", "viewController"]
+- !private ["CSo11SKLabelNode", "fontColor"]
+- !private ["CSo11SKLabelNode", "fontName"]
+- !private ["CSo11SKLabelNode", "fontSize"]
+- ["CSo11SKLabelNode", "init"]
+- !private ["CSo11SKLabelNode", "position"]
+- !private ["CSo11SKLabelNode", "text"]
 - ["CSo6SKNode", "Array"]
 - ["CSo6SKNode", "Bool"]
 - ["CSo6SKNode", "CFTimeInterval"]
@@ -1083,8 +1222,10 @@ depends-member:
 - !private ["CSo6SKNode", "CGRectGetMidY"]
 - !private ["CSo6SKNode", "CGVector"]
 - !private ["CSo6SKNode", "CGVectorMake"]
+- ["CSo6SKNode", "Int"]
 - !private ["CSo6SKNode", "SKAction"]
 - !private ["CSo6SKNode", "SKColor"]
+- ["CSo6SKNode", "SKLabelNode"]
 - !private ["CSo6SKNode", "SKPhysicsBody"]
 - ["CSo6SKNode", "SKPhysicsContact"]
 - ["CSo6SKNode", "SKSpriteNode"]
@@ -1092,6 +1233,7 @@ depends-member:
 - ["CSo6SKNode", "SKTextureAtlas"]
 - ["CSo6SKNode", "SKView"]
 - ["CSo6SKNode", "Set"]
+- !private ["CSo6SKNode", "UIColor"]
 - ["CSo6SKNode", "UIEvent"]
 - !private ["CSo6SKNode", "UINT32_MAX"]
 - ["CSo6SKNode", "UITouch"]
@@ -1113,6 +1255,9 @@ depends-member:
 - ["CSo6SKNode", "didBeginContact"]
 - ["CSo6SKNode", "didEndContact"]
 - ["CSo6SKNode", "didMoveToView"]
+- !private ["CSo6SKNode", "fontColor"]
+- !private ["CSo6SKNode", "fontName"]
+- !private ["CSo6SKNode", "fontSize"]
 - !private ["CSo6SKNode", "frame"]
 - !private ["CSo6SKNode", "hidden"]
 - ["CSo6SKNode", "init"]
@@ -1129,9 +1274,13 @@ depends-member:
 - !private ["CSo6SKNode", "position"]
 - !private ["CSo6SKNode", "print"]
 - ["CSo6SKNode", "randomBetweenNumbers"]
+- !private ["CSo6SKNode", "removeAllChildren"]
 - !private ["CSo6SKNode", "runAction"]
+- ["CSo6SKNode", "score"]
+- ["CSo6SKNode", "scoreLabel"]
 - !private ["CSo6SKNode", "size"]
 - ["CSo6SKNode", "start"]
+- !private ["CSo6SKNode", "text"]
 - ["CSo6SKNode", "topPipe1"]
 - ["CSo6SKNode", "topPipe2"]
 - ["CSo6SKNode", "touchesBegan"]
@@ -1159,10 +1308,12 @@ depends-member:
 - !private ["PSo24SKPhysicsContactDelegate", "CGVectorMake"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKAction"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKColor"]
+- ["PSo24SKPhysicsContactDelegate", "SKLabelNode"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKPhysicsBody"]
 - ["PSo24SKPhysicsContactDelegate", "SKSpriteNode"]
 - ["PSo24SKPhysicsContactDelegate", "SKTexture"]
 - ["PSo24SKPhysicsContactDelegate", "SKTextureAtlas"]
+- !private ["PSo24SKPhysicsContactDelegate", "UIColor"]
 - !private ["PSo24SKPhysicsContactDelegate", "UINT32_MAX"]
 - !private ["PSo24SKPhysicsContactDelegate", "abs"]
 - !private ["PSo24SKPhysicsContactDelegate", "addChild"]
@@ -1190,6 +1341,9 @@ depends-member:
 - !private ["PSo24SKPhysicsContactDelegate", "pipeHeight"]
 - !private ["PSo24SKPhysicsContactDelegate", "print"]
 - !private ["PSo24SKPhysicsContactDelegate", "randomBetweenNumbers"]
+- !private ["PSo24SKPhysicsContactDelegate", "removeAllChildren"]
+- !private ["PSo24SKPhysicsContactDelegate", "score"]
+- !private ["PSo24SKPhysicsContactDelegate", "scoreLabel"]
 - !private ["PSo24SKPhysicsContactDelegate", "start"]
 - !private ["PSo24SKPhysicsContactDelegate", "topPipe1"]
 - !private ["PSo24SKPhysicsContactDelegate", "topPipe2"]
@@ -1207,8 +1361,10 @@ depends-member:
 - !private ["CSo7SKScene", "CGRectGetMidY"]
 - !private ["CSo7SKScene", "CGVector"]
 - !private ["CSo7SKScene", "CGVectorMake"]
+- ["CSo7SKScene", "Int"]
 - !private ["CSo7SKScene", "SKAction"]
 - !private ["CSo7SKScene", "SKColor"]
+- ["CSo7SKScene", "SKLabelNode"]
 - !private ["CSo7SKScene", "SKPhysicsBody"]
 - ["CSo7SKScene", "SKPhysicsContact"]
 - ["CSo7SKScene", "SKSpriteNode"]
@@ -1216,6 +1372,7 @@ depends-member:
 - ["CSo7SKScene", "SKTextureAtlas"]
 - ["CSo7SKScene", "SKView"]
 - ["CSo7SKScene", "Set"]
+- !private ["CSo7SKScene", "UIColor"]
 - ["CSo7SKScene", "UIEvent"]
 - !private ["CSo7SKScene", "UINT32_MAX"]
 - ["CSo7SKScene", "UITouch"]
@@ -1250,6 +1407,9 @@ depends-member:
 - ["CSo7SKScene", "pipeHeight"]
 - !private ["CSo7SKScene", "print"]
 - ["CSo7SKScene", "randomBetweenNumbers"]
+- !private ["CSo7SKScene", "removeAllChildren"]
+- ["CSo7SKScene", "score"]
+- ["CSo7SKScene", "scoreLabel"]
 - ["CSo7SKScene", "start"]
 - ["CSo7SKScene", "topPipe1"]
 - ["CSo7SKScene", "topPipe2"]
@@ -1288,11 +1448,16 @@ depends-member:
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "init"]
 - ["Ps10Strideable", "Distance"]
 - ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "Stride"]
 - ["Ps10Strideable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["PSo21UIAppearanceContainer", "performSegueWithIdentifier"]
+- !private ["CSo7UIColor", "blackColor"]
 - !private ["CSo7UIColor", "init"]
 - !private ["PSo18UIContentContainer", "performSegueWithIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "performSegueWithIdentifier"]
@@ -1306,8 +1471,10 @@ depends-member:
 - !private ["CSo11UIResponder", "CGRectGetMidY"]
 - !private ["CSo11UIResponder", "CGVector"]
 - !private ["CSo11UIResponder", "CGVectorMake"]
+- ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "SKAction"]
 - !private ["CSo11UIResponder", "SKColor"]
+- ["CSo11UIResponder", "SKLabelNode"]
 - !private ["CSo11UIResponder", "SKPhysicsBody"]
 - ["CSo11UIResponder", "SKPhysicsContact"]
 - ["CSo11UIResponder", "SKSpriteNode"]
@@ -1315,6 +1482,7 @@ depends-member:
 - ["CSo11UIResponder", "SKTextureAtlas"]
 - ["CSo11UIResponder", "SKView"]
 - ["CSo11UIResponder", "Set"]
+- !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UIEvent"]
 - !private ["CSo11UIResponder", "UINT32_MAX"]
 - ["CSo11UIResponder", "UITouch"]
@@ -1336,6 +1504,9 @@ depends-member:
 - ["CSo11UIResponder", "didBeginContact"]
 - ["CSo11UIResponder", "didEndContact"]
 - ["CSo11UIResponder", "didMoveToView"]
+- !private ["CSo11UIResponder", "fontColor"]
+- !private ["CSo11UIResponder", "fontName"]
+- !private ["CSo11UIResponder", "fontSize"]
 - !private ["CSo11UIResponder", "frame"]
 - !private ["CSo11UIResponder", "hidden"]
 - ["CSo11UIResponder", "init"]
@@ -1353,9 +1524,13 @@ depends-member:
 - !private ["CSo11UIResponder", "position"]
 - !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "randomBetweenNumbers"]
+- !private ["CSo11UIResponder", "removeAllChildren"]
 - !private ["CSo11UIResponder", "runAction"]
+- ["CSo11UIResponder", "score"]
+- ["CSo11UIResponder", "scoreLabel"]
 - !private ["CSo11UIResponder", "size"]
 - ["CSo11UIResponder", "start"]
+- !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "topPipe1"]
 - ["CSo11UIResponder", "topPipe2"]
 - ["CSo11UIResponder", "touchesBegan"]
@@ -1366,6 +1541,13 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "performSegueWithIdentifier"]
 - !private ["PSo18UITraitEnvironment", "performSegueWithIdentifier"]
 - !private ["CSo16UIViewController", "performSegueWithIdentifier"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - ["Ps10_ArrayType", "Generator"]
 - ["Ps10_ArrayType", "Index"]
 - ["Ps10_ArrayType", "SubSequence"]
@@ -1375,14 +1557,19 @@ depends-member:
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - ["Ps33_BuiltinBooleanLiteralConvertible", "init"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps19_CVarArgAlignedType", "IntegerLiteralType"]
 - !private ["Ps19_CVarArgAlignedType", "Stride"]
 - ["Ps19_CVarArgAlignedType", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "IntegerLiteralType"]
 - !private ["Ps22_CVarArgPassedAsDouble", "Stride"]
 - ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps24_ColorLiteralConvertible", "blackColor"]
 - !private ["Ps24_ColorLiteralConvertible", "init"]
 - ["Ps24_DestructorSafeContainer", "Generator"]
 - ["Ps24_DestructorSafeContainer", "Index"]
@@ -1461,12 +1648,14 @@ depends-nominal:
 - !private "VSC6CGSize"
 - !private "VSC8CGVector"
 - "Ps11CVarArgType"
+- !private "Vs9Character"
 - "Ps14CollectionType"
 - "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - !private "Sd"
 - "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
 - "Ps23FloatLiteralConvertible"
 - "Ps17FloatingPointType"
@@ -1477,7 +1666,10 @@ depends-nominal:
 - "Ps9Indexable"
 - "Vs17IndexingGenerator"
 - "Si"
+- !private "Vs5Int16"
 - !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
 - "Ps21IntegerArithmeticType"
 - "Ps25IntegerLiteralConvertible"
 - "Ps11IntegerType"
@@ -1488,14 +1680,19 @@ depends-nominal:
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - !private "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Sq"
+- !private "Ps16OutputStreamType"
 - "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
 - "Ps30RangeReplaceableCollectionType"
 - !private "CSo8SKAction"
 - "CSo12SKEffectNode"
+- "CSo11SKLabelNode"
 - "CSo6SKNode"
 - !private "CSo13SKPhysicsBody"
 - "PSo24SKPhysicsContactDelegate"
@@ -1508,7 +1705,11 @@ depends-nominal:
 - "Ps17SignedIntegerType"
 - "Ps16SignedNumberType"
 - !private "Vs5Slice"
+- !private "Ps10Streamable"
 - "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - !private "PSo21UIAppearanceContainer"
 - !private "CSo7UIColor"
 - !private "PSo18UIContentContainer"
@@ -1517,9 +1718,20 @@ depends-nominal:
 - !private "PSo16UIStateRestoring"
 - !private "PSo18UITraitEnvironment"
 - !private "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
 - "Ps10_ArrayType"
 - "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - "Ps19_CVarArgAlignedType"
 - "Ps22_CVarArgPassedAsDouble"
 - !private "Ps24_ColorLiteralConvertible"
@@ -1553,4 +1765,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "5c41f35377e2aab062f0cb4efb49f82b"
+interface-hash: "4d9104f9d73dc309e6062989351b0ebc"

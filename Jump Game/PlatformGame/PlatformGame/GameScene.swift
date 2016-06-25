@@ -12,6 +12,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var isTouchingScreen = false
     var viewController : UIViewController!
+    
+    var score: Int = 0
 
     //DEFINE THE COLLISION CATEGORIES
     let birdCategory:UInt32 = 0x1 << 0
@@ -43,6 +45,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //DETERMINE IF THE GAME HAS STARTED OR NOT
     var start = Bool(false)
     var birdIsActive = Bool(false)
+    
+    let scoreLabel = SKLabelNode()
     
     override func didMoveToView(view: SKView) {
         
@@ -85,8 +89,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bird.size.width = bird.size.width / 10
         bird.size.height = bird.size.height / 10
         
-        
-        
         bottomPipe1.position = CGPointMake(800, 200);
         bottomPipe1.size.height = bottomPipe1.size.height / 2
         bottomPipe1.size.width = bottomPipe1.size.width / 2
@@ -111,6 +113,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         topPipe2.physicsBody?.categoryBitMask = pipeCategory
         topPipe2.physicsBody?.contactTestBitMask = birdCategory
         
+        scoreLabel.text = "0"
+        scoreLabel.fontSize = 70
+        scoreLabel.fontColor = UIColor.blackColor()
+        scoreLabel.fontName = "Pipe Dream"
+        scoreLabel.position = CGPoint(x: self.frame.width / 2, y: self.frame.height - 90)
+        
         addChild(self.myBackground)
         
         addChild(self.bottomPipe1)
@@ -120,6 +128,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         addChild(self.myFloor1)
         addChild(self.myFloor2)
+        addChild(scoreLabel)
         
         addChild(self.bird)
     
@@ -147,6 +156,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         myFloor1.physicsBody = SKPhysicsBody(edgeLoopFromRect: myFloor1.frame)
         myFloor2.physicsBody = SKPhysicsBody(edgeLoopFromRect: myFloor1.frame)
+        
+        self.score = 0
 
     }
     
@@ -181,11 +192,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             topPipe2.position = CGPointMake(topPipe2.position.x-8, 700);
             
             if (bottomPipe1.position.x < -bottomPipe1.size.width + 600 / 2){
+                
+                self.score += 1
                 bottomPipe1.position = CGPointMake(bottomPipe2.position.x + bottomPipe2.size.width * 4, pipeHeight);
                 topPipe1.position = CGPointMake(topPipe2.position.x + topPipe2.size.width * 4, pipeHeight);
             }
             
             if (bottomPipe2.position.x < -bottomPipe2.size.width + 600 / 2) {
+                
+                self.score += 1
                 bottomPipe2.position = CGPointMake(bottomPipe1.position.x + bottomPipe1.size.width * 4, pipeHeight);
                 topPipe2.position = CGPointMake(topPipe1.position.x + topPipe1.size.width * 4, pipeHeight);
             }
@@ -195,6 +210,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //GENERATE A RANDOM NUMBER BETWEEN 100 AND 240 (THE MAXIMUM SIZE OF THE PIPES)
                 pipeHeight = randomBetweenNumbers(100, secondNum: 240)
             }
+            
+            scoreLabel.text = "\(self.score)"
+            
         }
     }
     
@@ -241,7 +259,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         //GAMEOVER = TRUE
         print("BIRD HAS MADE CONTACT")
-        self.viewController.performSegueWithIdentifier("segueGameOver", sender: nil)
-        
+        self.removeAllChildren()
+        self.viewController.performSegueWithIdentifier("segueGameOver", sender: self.score)
     }
 }

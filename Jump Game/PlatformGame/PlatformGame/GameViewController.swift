@@ -90,9 +90,11 @@ class GameViewController: UIViewController, GameOverDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueGameOver" {
-            let vc = segue.destinationViewController as! GameOverViewController
-            gameOverViewController = vc
-            gameOverViewController.delegate = self
+            if let score = sender as? Int, vc = segue.destinationViewController as? GameOverViewController {
+                gameOverViewController = vc
+                gameOverViewController.delegate = self
+                gameOverViewController.score = score
+            }
         }
     }
     
