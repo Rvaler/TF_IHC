@@ -6,79 +6,85 @@ provides-nominal:
 provides-member:
 - ["C12PlatformGame9GameScene", ""]
 provides-dynamic-lookup:
-- "randomBetweenNumbers"
-- "birdAtlas"
-- "bird"
-- "bottomPipe1"
-- "pipeHeight"
-- "touchesBegan"
-- "myPipesTexture"
+- "createBirdPhysics"
 - "topPipe2"
 - "score"
-- "myFloor1"
+- "start"
+- "touchesEnded"
+- "bottomPipe1"
+- "myBackground"
 - "didBeginContact"
-- "scoreLabel"
-- "didMoveToView"
-- "tutorialImage"
+- "myFloor1"
+- "birdSprites"
 - "bottomPipe2"
 - "pipeCategory"
-- "birdSprites"
-- "update"
-- "myBackground"
-- "start"
-- "viewController"
-- "touchesEnded"
-- "myFloor2"
-- "birdIsActive"
-- "createBirdPhysics"
-- "birdCategory"
+- "scoreLabel"
+- "isJumpGame"
 - "isTouchingScreen"
+- "myFloor2"
+- "pipeHeight"
+- "tutorialImage"
+- "viewController"
+- "update"
+- "touchesBegan"
+- "myPipesTexture"
+- "bird"
+- "didMoveToView"
+- "birdAtlas"
+- "birdCategory"
+- "randomBetweenNumbers"
 - "topPipe1"
+- "birdIsActive"
 depends-top-level:
-- "CGFloat"
-- "UIViewController"
-- "SKScene"
-- !private "CGPoint"
-- "SKPhysicsContactDelegate"
-- !private "+="
-- !private "abs"
-- "SKSpriteNode"
-- "UITouch"
 - !private "SKColor"
-- "Int"
-- "SKTextureAtlas"
-- !private "*"
-- !private "UIColor"
-- "StringLiteralType"
-- "SKLabelNode"
-- !private "/"
-- !private "CGRectGetMidY"
-- "GameScene"
-- !private "UnicodeScalarType"
-- !private "SKAction"
-- !private "<"
-- !private "print"
-- !private "CGPointMake"
-- "Bool"
-- !private "-"
-- "<<"
-- !private "UINT32_MAX"
-- "Array"
-- "SKTexture"
-- !private "min"
-- !private "CGVector"
-- !private "arc4random"
-- "CFTimeInterval"
 - "UInt32"
-- "SKPhysicsContact"
-- "SKView"
-- !private "+"
-- "BooleanLiteralType"
+- "GameScene"
+- !private "abs"
+- "<<"
+- !private "NSUserDefaults"
 - "UIEvent"
+- "SKSpriteNode"
+- "CGFloat"
+- !private "-"
+- !private "CGRectGetMidY"
+- !private "+="
+- "StringLiteralType"
+- "SKPhysicsContactDelegate"
+- "SKScene"
+- !private "CGVector"
+- !private "UINT32_MAX"
+- !private "/"
+- !private "min"
+- "CFTimeInterval"
 - !private "CGVectorMake"
+- !private "CGPoint"
+- !private ">"
+- "BooleanLiteralType"
 - !private "SKPhysicsBody"
+- !private "print"
+- "SKTextureAtlas"
+- !private "=="
+- "UITouch"
+- "SKLabelNode"
 - !private "CGPointZero"
+- "Int"
 - "Set"
+- !private "CGPointMake"
+- "SKPhysicsContact"
+- !private "+"
+- !private "UnicodeScalarType"
+- !private "*"
+- "UIViewController"
+- "SKView"
+- "Bool"
+- "SKTexture"
+- "Array"
+- !private "&&"
+- !private "!"
+- !private "SKAction"
+- !private "UIColor"
+- !private "<"
+- !private "arc4random"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -92,6 +98,7 @@ depends-member:
 - !private ["Ps9AnyObject", "CGRectGetMidY"]
 - !private ["Ps9AnyObject", "CGVector"]
 - !private ["Ps9AnyObject", "CGVectorMake"]
+- !private ["Ps9AnyObject", "NSUserDefaults"]
 - !private ["Ps9AnyObject", "SKAction"]
 - !private ["Ps9AnyObject", "SKColor"]
 - ["Ps9AnyObject", "SKLabelNode"]
@@ -131,6 +138,7 @@ depends-member:
 - !private ["Ps9AnyObject", "frame"]
 - !private ["Ps9AnyObject", "hidden"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isJumpGame"]
 - ["Ps9AnyObject", "isTouchingScreen"]
 - !private ["Ps9AnyObject", "linearDamping"]
 - !private ["Ps9AnyObject", "min"]
@@ -138,6 +146,7 @@ depends-member:
 - ["Ps9AnyObject", "myFloor1"]
 - ["Ps9AnyObject", "myFloor2"]
 - ["Ps9AnyObject", "myPipesTexture"]
+- !private ["Ps9AnyObject", "objectForKey"]
 - !private ["Ps9AnyObject", "performSegueWithIdentifier"]
 - !private ["Ps9AnyObject", "physicsBody"]
 - !private ["Ps9AnyObject", "physicsWorld"]
@@ -153,6 +162,7 @@ depends-member:
 - ["Ps9AnyObject", "score"]
 - ["Ps9AnyObject", "scoreLabel"]
 - !private ["Ps9AnyObject", "size"]
+- !private ["Ps9AnyObject", "standardUserDefaults"]
 - ["Ps9AnyObject", "start"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textureNamed"]
@@ -218,6 +228,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGVectorMake"]
 - ["Ps11CVarArgType", "Distance"]
 - ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "NSUserDefaults"]
 - !private ["Ps11CVarArgType", "SKAction"]
 - !private ["Ps11CVarArgType", "SKColor"]
 - ["Ps11CVarArgType", "SKLabelNode"]
@@ -258,6 +269,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "frame"]
 - !private ["Ps11CVarArgType", "hidden"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isJumpGame"]
 - ["Ps11CVarArgType", "isTouchingScreen"]
 - !private ["Ps11CVarArgType", "linearDamping"]
 - !private ["Ps11CVarArgType", "min"]
@@ -265,6 +277,7 @@ depends-member:
 - ["Ps11CVarArgType", "myFloor1"]
 - ["Ps11CVarArgType", "myFloor2"]
 - ["Ps11CVarArgType", "myPipesTexture"]
+- !private ["Ps11CVarArgType", "objectForKey"]
 - !private ["Ps11CVarArgType", "performSegueWithIdentifier"]
 - !private ["Ps11CVarArgType", "physicsBody"]
 - !private ["Ps11CVarArgType", "physicsWorld"]
@@ -280,6 +293,7 @@ depends-member:
 - ["Ps11CVarArgType", "score"]
 - ["Ps11CVarArgType", "scoreLabel"]
 - !private ["Ps11CVarArgType", "size"]
+- !private ["Ps11CVarArgType", "standardUserDefaults"]
 - ["Ps11CVarArgType", "start"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textureNamed"]
@@ -315,6 +329,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGVectorMake"]
 - ["Ps28CustomDebugStringConvertible", "Generator"]
 - ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "SKAction"]
 - !private ["Ps28CustomDebugStringConvertible", "SKColor"]
 - ["Ps28CustomDebugStringConvertible", "SKLabelNode"]
@@ -322,6 +337,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
 - ["Ps28CustomDebugStringConvertible", "SKTexture"]
 - ["Ps28CustomDebugStringConvertible", "SKTextureAtlas"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
 - ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UINT32_MAX"]
@@ -357,6 +373,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isJumpGame"]
 - ["Ps28CustomDebugStringConvertible", "isTouchingScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "linearDamping"]
 - !private ["Ps28CustomDebugStringConvertible", "min"]
@@ -364,6 +381,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "myFloor1"]
 - ["Ps28CustomDebugStringConvertible", "myFloor2"]
 - ["Ps28CustomDebugStringConvertible", "myPipesTexture"]
+- !private ["Ps28CustomDebugStringConvertible", "objectForKey"]
 - !private ["Ps28CustomDebugStringConvertible", "performSegueWithIdentifier"]
 - !private ["Ps28CustomDebugStringConvertible", "physicsBody"]
 - !private ["Ps28CustomDebugStringConvertible", "physicsWorld"]
@@ -379,6 +397,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "score"]
 - ["Ps28CustomDebugStringConvertible", "scoreLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
+- !private ["Ps28CustomDebugStringConvertible", "standardUserDefaults"]
 - ["Ps28CustomDebugStringConvertible", "start"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
@@ -405,6 +424,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "Generator"]
 - ["Ps23CustomStringConvertible", "Index"]
 - ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "NSUserDefaults"]
 - !private ["Ps23CustomStringConvertible", "SKAction"]
 - !private ["Ps23CustomStringConvertible", "SKColor"]
 - ["Ps23CustomStringConvertible", "SKLabelNode"]
@@ -449,6 +469,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "frame"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isJumpGame"]
 - ["Ps23CustomStringConvertible", "isTouchingScreen"]
 - !private ["Ps23CustomStringConvertible", "linearDamping"]
 - !private ["Ps23CustomStringConvertible", "min"]
@@ -456,6 +477,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "myFloor1"]
 - ["Ps23CustomStringConvertible", "myFloor2"]
 - ["Ps23CustomStringConvertible", "myPipesTexture"]
+- !private ["Ps23CustomStringConvertible", "objectForKey"]
 - !private ["Ps23CustomStringConvertible", "performSegueWithIdentifier"]
 - !private ["Ps23CustomStringConvertible", "physicsBody"]
 - !private ["Ps23CustomStringConvertible", "physicsWorld"]
@@ -471,6 +493,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "score"]
 - ["Ps23CustomStringConvertible", "scoreLabel"]
 - !private ["Ps23CustomStringConvertible", "size"]
+- !private ["Ps23CustomStringConvertible", "standardUserDefaults"]
 - ["Ps23CustomStringConvertible", "start"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "text"]
@@ -496,6 +519,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGVectorMake"]
 - ["Ps9Equatable", "Distance"]
 - ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NSUserDefaults"]
 - !private ["Ps9Equatable", "SKAction"]
 - !private ["Ps9Equatable", "SKColor"]
 - ["Ps9Equatable", "SKLabelNode"]
@@ -538,6 +562,7 @@ depends-member:
 - !private ["Ps9Equatable", "height"]
 - !private ["Ps9Equatable", "hidden"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isJumpGame"]
 - ["Ps9Equatable", "isTouchingScreen"]
 - !private ["Ps9Equatable", "linearDamping"]
 - !private ["Ps9Equatable", "min"]
@@ -545,6 +570,7 @@ depends-member:
 - ["Ps9Equatable", "myFloor1"]
 - ["Ps9Equatable", "myFloor2"]
 - ["Ps9Equatable", "myPipesTexture"]
+- !private ["Ps9Equatable", "objectForKey"]
 - !private ["Ps9Equatable", "performSegueWithIdentifier"]
 - !private ["Ps9Equatable", "physicsBody"]
 - !private ["Ps9Equatable", "physicsWorld"]
@@ -560,6 +586,7 @@ depends-member:
 - ["Ps9Equatable", "score"]
 - ["Ps9Equatable", "scoreLabel"]
 - !private ["Ps9Equatable", "size"]
+- !private ["Ps9Equatable", "standardUserDefaults"]
 - ["Ps9Equatable", "start"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textureNamed"]
@@ -596,6 +623,7 @@ depends-member:
 - !private ["C12PlatformGame9GameScene", "CGVector"]
 - !private ["C12PlatformGame9GameScene", "CGVectorMake"]
 - ["C12PlatformGame9GameScene", "Int"]
+- !private ["C12PlatformGame9GameScene", "NSUserDefaults"]
 - !private ["C12PlatformGame9GameScene", "SKAction"]
 - !private ["C12PlatformGame9GameScene", "SKColor"]
 - ["C12PlatformGame9GameScene", "SKLabelNode"]
@@ -630,6 +658,7 @@ depends-member:
 - ["C12PlatformGame9GameScene", "didMoveToView"]
 - !private ["C12PlatformGame9GameScene", "frame"]
 - ["C12PlatformGame9GameScene", "init"]
+- ["C12PlatformGame9GameScene", "isJumpGame"]
 - ["C12PlatformGame9GameScene", "isTouchingScreen"]
 - !private ["C12PlatformGame9GameScene", "min"]
 - ["C12PlatformGame9GameScene", "myBackground"]
@@ -665,6 +694,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGVectorMake"]
 - ["Ps8Hashable", "Distance"]
 - ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NSUserDefaults"]
 - !private ["Ps8Hashable", "SKAction"]
 - !private ["Ps8Hashable", "SKColor"]
 - ["Ps8Hashable", "SKLabelNode"]
@@ -706,6 +736,7 @@ depends-member:
 - !private ["Ps8Hashable", "frame"]
 - !private ["Ps8Hashable", "hidden"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isJumpGame"]
 - ["Ps8Hashable", "isTouchingScreen"]
 - !private ["Ps8Hashable", "linearDamping"]
 - !private ["Ps8Hashable", "min"]
@@ -713,6 +744,7 @@ depends-member:
 - ["Ps8Hashable", "myFloor1"]
 - ["Ps8Hashable", "myFloor2"]
 - ["Ps8Hashable", "myPipesTexture"]
+- !private ["Ps8Hashable", "objectForKey"]
 - !private ["Ps8Hashable", "performSegueWithIdentifier"]
 - !private ["Ps8Hashable", "physicsBody"]
 - !private ["Ps8Hashable", "physicsWorld"]
@@ -728,6 +760,7 @@ depends-member:
 - ["Ps8Hashable", "score"]
 - ["Ps8Hashable", "scoreLabel"]
 - !private ["Ps8Hashable", "size"]
+- !private ["Ps8Hashable", "standardUserDefaults"]
 - ["Ps8Hashable", "start"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textureNamed"]
@@ -796,6 +829,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGRectGetMidY"]
 - !private ["PSo8NSCoding", "CGVector"]
 - !private ["PSo8NSCoding", "CGVectorMake"]
+- !private ["PSo8NSCoding", "NSUserDefaults"]
 - !private ["PSo8NSCoding", "SKAction"]
 - !private ["PSo8NSCoding", "SKColor"]
 - ["PSo8NSCoding", "SKLabelNode"]
@@ -835,6 +869,7 @@ depends-member:
 - !private ["PSo8NSCoding", "frame"]
 - !private ["PSo8NSCoding", "hidden"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "isJumpGame"]
 - ["PSo8NSCoding", "isTouchingScreen"]
 - !private ["PSo8NSCoding", "linearDamping"]
 - !private ["PSo8NSCoding", "min"]
@@ -878,6 +913,7 @@ depends-member:
 - !private ["PSo9NSCopying", "CGRectGetMidY"]
 - !private ["PSo9NSCopying", "CGVector"]
 - !private ["PSo9NSCopying", "CGVectorMake"]
+- !private ["PSo9NSCopying", "NSUserDefaults"]
 - !private ["PSo9NSCopying", "SKAction"]
 - !private ["PSo9NSCopying", "SKColor"]
 - ["PSo9NSCopying", "SKLabelNode"]
@@ -916,6 +952,7 @@ depends-member:
 - !private ["PSo9NSCopying", "frame"]
 - !private ["PSo9NSCopying", "hidden"]
 - ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "isJumpGame"]
 - ["PSo9NSCopying", "isTouchingScreen"]
 - !private ["PSo9NSCopying", "linearDamping"]
 - !private ["PSo9NSCopying", "min"]
@@ -950,6 +987,7 @@ depends-member:
 - ["PSo9NSCopying", ""]
 - !private ["PSo26NSExtensionRequestHandling", "performSegueWithIdentifier"]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "Array"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "CFTimeInterval"]
@@ -961,6 +999,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGVector"]
 - !private ["CSo8NSObject", "CGVectorMake"]
 - ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "NSUserDefaults"]
 - !private ["CSo8NSObject", "SKAction"]
 - !private ["CSo8NSObject", "SKColor"]
 - ["CSo8NSObject", "SKLabelNode"]
@@ -1007,6 +1046,7 @@ depends-member:
 - !private ["CSo8NSObject", "frame"]
 - !private ["CSo8NSObject", "hidden"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isJumpGame"]
 - ["CSo8NSObject", "isTouchingScreen"]
 - !private ["CSo8NSObject", "linearDamping"]
 - !private ["CSo8NSObject", "min"]
@@ -1014,6 +1054,7 @@ depends-member:
 - ["CSo8NSObject", "myFloor1"]
 - ["CSo8NSObject", "myFloor2"]
 - ["CSo8NSObject", "myPipesTexture"]
+- !private ["CSo8NSObject", "objectForKey"]
 - !private ["CSo8NSObject", "performSegueWithIdentifier"]
 - !private ["CSo8NSObject", "physicsBody"]
 - !private ["CSo8NSObject", "physicsWorld"]
@@ -1029,6 +1070,7 @@ depends-member:
 - ["CSo8NSObject", "score"]
 - ["CSo8NSObject", "scoreLabel"]
 - !private ["CSo8NSObject", "size"]
+- !private ["CSo8NSObject", "standardUserDefaults"]
 - ["CSo8NSObject", "start"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textureNamed"]
@@ -1049,6 +1091,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidY"]
 - !private ["PSo16NSObjectProtocol", "CGVector"]
 - !private ["PSo16NSObjectProtocol", "CGVectorMake"]
+- !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "SKAction"]
 - !private ["PSo16NSObjectProtocol", "SKColor"]
 - ["PSo16NSObjectProtocol", "SKLabelNode"]
@@ -1088,6 +1131,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "frame"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isJumpGame"]
 - ["PSo16NSObjectProtocol", "isTouchingScreen"]
 - !private ["PSo16NSObjectProtocol", "linearDamping"]
 - !private ["PSo16NSObjectProtocol", "min"]
@@ -1095,6 +1139,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "myFloor1"]
 - ["PSo16NSObjectProtocol", "myFloor2"]
 - ["PSo16NSObjectProtocol", "myPipesTexture"]
+- !private ["PSo16NSObjectProtocol", "objectForKey"]
 - !private ["PSo16NSObjectProtocol", "performSegueWithIdentifier"]
 - !private ["PSo16NSObjectProtocol", "physicsBody"]
 - !private ["PSo16NSObjectProtocol", "physicsWorld"]
@@ -1110,6 +1155,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "score"]
 - ["PSo16NSObjectProtocol", "scoreLabel"]
 - !private ["PSo16NSObjectProtocol", "size"]
+- !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - ["PSo16NSObjectProtocol", "start"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textureNamed"]
@@ -1125,6 +1171,10 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "blackColor"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
+- !private ["CSo14NSUserDefaults", "objectForKey"]
+- !private ["CSo14NSUserDefaults", "standardUserDefaults"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - ["Ps21RandomAccessIndexType", "Distance"]
@@ -1150,6 +1200,7 @@ depends-member:
 - !private ["CSo12SKEffectNode", "CGVector"]
 - !private ["CSo12SKEffectNode", "CGVectorMake"]
 - ["CSo12SKEffectNode", "Int"]
+- !private ["CSo12SKEffectNode", "NSUserDefaults"]
 - !private ["CSo12SKEffectNode", "SKAction"]
 - !private ["CSo12SKEffectNode", "SKColor"]
 - ["CSo12SKEffectNode", "SKLabelNode"]
@@ -1183,6 +1234,7 @@ depends-member:
 - ["CSo12SKEffectNode", "didMoveToView"]
 - !private ["CSo12SKEffectNode", "frame"]
 - ["CSo12SKEffectNode", "init"]
+- ["CSo12SKEffectNode", "isJumpGame"]
 - ["CSo12SKEffectNode", "isTouchingScreen"]
 - !private ["CSo12SKEffectNode", "min"]
 - ["CSo12SKEffectNode", "myBackground"]
@@ -1223,6 +1275,7 @@ depends-member:
 - !private ["CSo6SKNode", "CGVector"]
 - !private ["CSo6SKNode", "CGVectorMake"]
 - ["CSo6SKNode", "Int"]
+- !private ["CSo6SKNode", "NSUserDefaults"]
 - !private ["CSo6SKNode", "SKAction"]
 - !private ["CSo6SKNode", "SKColor"]
 - ["CSo6SKNode", "SKLabelNode"]
@@ -1261,6 +1314,7 @@ depends-member:
 - !private ["CSo6SKNode", "frame"]
 - !private ["CSo6SKNode", "hidden"]
 - ["CSo6SKNode", "init"]
+- ["CSo6SKNode", "isJumpGame"]
 - ["CSo6SKNode", "isTouchingScreen"]
 - !private ["CSo6SKNode", "min"]
 - ["CSo6SKNode", "myBackground"]
@@ -1306,6 +1360,7 @@ depends-member:
 - !private ["PSo24SKPhysicsContactDelegate", "CGRectGetMidY"]
 - !private ["PSo24SKPhysicsContactDelegate", "CGVector"]
 - !private ["PSo24SKPhysicsContactDelegate", "CGVectorMake"]
+- !private ["PSo24SKPhysicsContactDelegate", "NSUserDefaults"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKAction"]
 - !private ["PSo24SKPhysicsContactDelegate", "SKColor"]
 - ["PSo24SKPhysicsContactDelegate", "SKLabelNode"]
@@ -1330,6 +1385,7 @@ depends-member:
 - ["PSo24SKPhysicsContactDelegate", "didBeginContact"]
 - ["PSo24SKPhysicsContactDelegate", "didEndContact"]
 - !private ["PSo24SKPhysicsContactDelegate", "frame"]
+- !private ["PSo24SKPhysicsContactDelegate", "isJumpGame"]
 - !private ["PSo24SKPhysicsContactDelegate", "isTouchingScreen"]
 - !private ["PSo24SKPhysicsContactDelegate", "min"]
 - !private ["PSo24SKPhysicsContactDelegate", "myBackground"]
@@ -1362,6 +1418,7 @@ depends-member:
 - !private ["CSo7SKScene", "CGVector"]
 - !private ["CSo7SKScene", "CGVectorMake"]
 - ["CSo7SKScene", "Int"]
+- !private ["CSo7SKScene", "NSUserDefaults"]
 - !private ["CSo7SKScene", "SKAction"]
 - !private ["CSo7SKScene", "SKColor"]
 - ["CSo7SKScene", "SKLabelNode"]
@@ -1395,6 +1452,7 @@ depends-member:
 - ["CSo7SKScene", "didMoveToView"]
 - !private ["CSo7SKScene", "frame"]
 - ["CSo7SKScene", "init"]
+- ["CSo7SKScene", "isJumpGame"]
 - ["CSo7SKScene", "isTouchingScreen"]
 - !private ["CSo7SKScene", "min"]
 - ["CSo7SKScene", "myBackground"]
@@ -1472,6 +1530,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGVector"]
 - !private ["CSo11UIResponder", "CGVectorMake"]
 - ["CSo11UIResponder", "Int"]
+- !private ["CSo11UIResponder", "NSUserDefaults"]
 - !private ["CSo11UIResponder", "SKAction"]
 - !private ["CSo11UIResponder", "SKColor"]
 - ["CSo11UIResponder", "SKLabelNode"]
@@ -1510,6 +1569,7 @@ depends-member:
 - !private ["CSo11UIResponder", "frame"]
 - !private ["CSo11UIResponder", "hidden"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "isJumpGame"]
 - ["CSo11UIResponder", "isTouchingScreen"]
 - !private ["CSo11UIResponder", "min"]
 - ["CSo11UIResponder", "myBackground"]
@@ -1601,6 +1661,7 @@ depends-member:
 - ["Ps12_Reflectable", "Generator"]
 - ["Ps12_Reflectable", "Index"]
 - ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
 - !private ["Ps12_Reflectable", "Stride"]
 - ["Ps12_Reflectable", "SubSequence"]
 - ["Ps12_Reflectable", "_Element"]
@@ -1681,11 +1742,14 @@ depends-nominal:
 - "PSo9NSCopying"
 - !private "PSo26NSExtensionRequestHandling"
 - !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- !private "Sq"
+- !private "CSo14NSUserDefaults"
+- "Ps21NilLiteralConvertible"
+- "Sq"
 - !private "Ps16OutputStreamType"
 - "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
@@ -1765,4 +1829,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "4d9104f9d73dc309e6062989351b0ebc"
+interface-hash: "2f4b82b285c3ef50b0d7b81b0130a994"

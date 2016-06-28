@@ -16,6 +16,64 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Config View Controller-->
+        <scene sceneID="5Lp-FF-pWu">
+            <objects>
+                <viewController id="xSV-WX-lcg" customClass="ConfigViewController" customModule="PlatformGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIp-iP-j6H"/>
+                        <viewControllerLayoutGuide type="bottom" id="TEn-Cy-bUP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="liV-Nm-u4i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zzv-t0-uZX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-hm-MT8">
+                                <rect key="frame" x="214" y="92" width="173" height="29"/>
+                                <segments>
+                                    <segment title="Long Press"/>
+                                    <segment title="Jump Mode"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="segmentControlChanged:" destination="xSV-WX-lcg" eventType="valueChanged" id="hQ8-IF-LUT"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zzv-t0-uZX" secondAttribute="trailing" id="4ZV-Od-745"/>
+                            <constraint firstItem="zzv-t0-uZX" firstAttribute="top" secondItem="liV-Nm-u4i" secondAttribute="top" id="Hem-rk-nzG"/>
+                            <constraint firstItem="aLK-hm-MT8" firstAttribute="centerX" secondItem="liV-Nm-u4i" secondAttribute="centerX" id="P5j-RW-lwk"/>
+                            <constraint firstItem="zzv-t0-uZX" firstAttribute="leading" secondItem="liV-Nm-u4i" secondAttribute="leading" id="mhg-Fd-goi"/>
+                            <constraint firstItem="zzv-t0-uZX" firstAttribute="top" secondItem="aLK-hm-MT8" secondAttribute="bottom" id="rS8-bu-U3a"/>
+                            <constraint firstItem="TEn-Cy-bUP" firstAttribute="top" secondItem="zzv-t0-uZX" secondAttribute="bottom" id="w1v-vb-rPM"/>
+                            <constraint firstItem="aLK-hm-MT8" firstAttribute="top" secondItem="VIp-iP-j6H" secondAttribute="bottom" constant="72" id="wHX-IE-nSb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rS8-bu-U3a"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="vmy-x5-Xyo">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="DrR-wV-coG">
+                            <connections>
+                                <action selector="actionCancelBtnPressed:" destination="xSV-WX-lcg" id="lsU-gr-oWV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="aLK-hm-MT8" id="eEV-Su-4bK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9i-fj-req" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="-505"/>
+        </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="Udh-OO-BVy">
             <objects>
@@ -62,6 +120,13 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roG-D0-X22">
+                                <rect key="frame" x="8" y="28" width="46" height="30"/>
+                                <state key="normal" title="Config"/>
+                                <connections>
+                                    <segue destination="wW4-lh-qO7" kind="show" id="sb5-EF-3nU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -77,6 +142,8 @@
                             <constraint firstItem="bOs-A5-hEU" firstAttribute="centerX" secondItem="Y3h-2r-aKB" secondAttribute="centerX" id="f7S-zg-cCE"/>
                             <constraint firstItem="giX-Ko-Ubc" firstAttribute="centerX" secondItem="6oS-gU-zS4" secondAttribute="centerX" id="foO-HB-owc"/>
                             <constraint firstItem="Y3h-2r-aKB" firstAttribute="top" secondItem="6oS-gU-zS4" secondAttribute="top" id="iz1-i2-yJc"/>
+                            <constraint firstItem="roG-D0-X22" firstAttribute="leading" secondItem="6oS-gU-zS4" secondAttribute="leading" constant="8" id="msa-Iv-d1K"/>
+                            <constraint firstItem="roG-D0-X22" firstAttribute="top" secondItem="j3L-va-D1s" secondAttribute="bottom" constant="8" id="sKm-wm-b7J"/>
                             <constraint firstItem="bOs-A5-hEU" firstAttribute="top" secondItem="giX-Ko-Ubc" secondAttribute="bottom" constant="81.5" id="udP-Bx-HbZ"/>
                         </constraints>
                         <variation key="default">
@@ -208,7 +275,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obw-rn-j0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="-80"/>
+            <point key="canvasLocation" x="1936" y="-80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zg7-k4-zZa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wW4-lh-qO7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2VY-hv-XX1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xSV-WX-lcg" kind="relationship" relationship="rootViewController" id="iE6-Sy-iRi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xk-aH-9rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-459" y="-505"/>
         </scene>
     </scenes>
     <resources>
@@ -217,6 +302,6 @@
         <image name="playerIntro" width="287" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ITr-p8-ckR"/>
+        <segue reference="5s7-fT-mno"/>
     </inferredMetricsTieBreakers>
 </document>

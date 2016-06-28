@@ -116,9 +116,24 @@ SWIFT_CLASS("_TtC12PlatformGame11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
+@class NSUserDefaults;
+@class UISegmentedControl;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC12PlatformGame20ConfigViewController")
+@interface ConfigViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified segmentedControl;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)actionCancelBtnPressed:(id _Nonnull)sender;
+- (IBAction)segmentControlChanged:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UILabel;
 
 SWIFT_CLASS("_TtC12PlatformGame22GameOverViewController")
 @interface GameOverViewController : UIViewController
@@ -144,6 +159,7 @@ SWIFT_CLASS("_TtC12PlatformGame9GameScene")
 @property (nonatomic) BOOL isTouchingScreen;
 @property (nonatomic, strong) UIViewController * _Null_unspecified viewController;
 @property (nonatomic) NSInteger score;
+@property (nonatomic) BOOL isJumpGame;
 @property (nonatomic, readonly) uint32_t birdCategory;
 @property (nonatomic, readonly) uint32_t pipeCategory;
 @property (nonatomic, readonly, strong) SKTextureAtlas * _Nonnull birdAtlas;

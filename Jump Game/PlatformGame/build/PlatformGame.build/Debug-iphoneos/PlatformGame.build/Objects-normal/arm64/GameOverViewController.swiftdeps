@@ -9,20 +9,20 @@ provides-member:
 - ["P12PlatformGame16GameOverDelegate", ""]
 - ["C12PlatformGame22GameOverViewController", ""]
 provides-dynamic-lookup:
+- "actionRestartBtnPressed"
 - "lblScore"
 - "didReceiveMemoryWarning"
 - "viewDidLoad"
-- "actionRestartBtnPressed"
 depends-top-level:
-- "AnyObject"
-- !private "StringLiteralType"
-- "GameOverViewController"
-- "Int"
-- "UIViewController"
-- "GameOverDelegate"
 - "UILabel"
-- !private "BooleanLiteralType"
+- !private "StringLiteralType"
 - "UIButton"
+- "Int"
+- !private "BooleanLiteralType"
+- "GameOverViewController"
+- "AnyObject"
+- "GameOverDelegate"
+- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "actionRestartBtnPressed"]
 - ["Ps9AnyObject", "delegate"]

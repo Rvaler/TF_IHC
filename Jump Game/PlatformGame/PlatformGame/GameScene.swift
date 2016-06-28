@@ -14,6 +14,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var viewController : UIViewController!
     
     var score: Int = 0
+    
+    // jump = 1
+    // long press = 0
+    var isJumpGame: Bool = false
 
     //DEFINE THE COLLISION CATEGORIES
     let birdCategory:UInt32 = 0x1 << 0
@@ -49,6 +53,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scoreLabel = SKLabelNode()
     
     override func didMoveToView(view: SKView) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let gameType = defaults.objectForKey("gameType") as? Int {
+            if gameType == 0 {
+               self.isJumpGame = false
+            }else{
+               self.isJumpGame = true
+            }
+        }
         
         //CREATE A BORDER AROUND THE SCREEN
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
@@ -182,7 +195,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //IF THE GAME HAS STARTED, BEGIN SHOWING THE PIPES
         if (start) {
             
-            if self.isTouchingScreen {
+            if self.isTouchingScreen && !self.isJumpGame {
                 self.bird.physicsBody!.velocity = CGVector(dx: 0, dy: 210)
             }
             
@@ -208,7 +221,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if (bottomPipe1.position.x < self.frame.width / 3 + 40)
             {
                 //GENERATE A RANDOM NUMBER BETWEEN 100 AND 240 (THE MAXIMUM SIZE OF THE PIPES)
-                pipeHeight = randomBetweenNumbers(100, secondNum: 240)
+                var maxHeight = randomBetweenNumbers(100, secondNum: 120 + CGFloat(2 * self.score))
+                if maxHeight > 240 { maxHeight = 240 }
+                pipeHeight = maxHeight
             }
             
             scoreLabel.text = "\(self.score)"
@@ -234,7 +249,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if (birdIsActive)
         {
             self.isTouchingScreen = true
-//        self.bird.physicsBody!.applyImpulse(CGVectorMake(0, 150))
+            if self.isJumpGame {
+                self.bird.physicsBody!.applyImpulse(CGVectorMake(0, 120))
+            }
         }
         else
         {

@@ -18,6 +18,7 @@
 		31E645F21C0BC4A100DD7F11 /* PlatformGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E645F11C0BC4A100DD7F11 /* PlatformGameTests.swift */; };
 		54014D411CFE4E1300CF9B23 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54014D401CFE4E1300CF9B23 /* MainMenuViewController.swift */; };
 		54014D431CFE4F5D00CF9B23 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54014D421CFE4F5D00CF9B23 /* GameOverViewController.swift */; };
+		540EFF391D22C508001B9DA5 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EFF381D22C508001B9DA5 /* ConfigViewController.swift */; };
 		54930FEB1D0349D700459B6C /* Pipe_Dream.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54930FE91D0346FB00459B6C /* Pipe_Dream.ttf */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		31E645F11C0BC4A100DD7F11 /* PlatformGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformGameTests.swift; sourceTree = "<group>"; };
 		54014D401CFE4E1300CF9B23 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		54014D421CFE4F5D00CF9B23 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		540EFF381D22C508001B9DA5 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		54930FE91D0346FB00459B6C /* Pipe_Dream.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pipe_Dream.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				31E645DB1C0BC4A100DD7F11 /* GameScene.swift */,
 				31E645DD1C0BC4A100DD7F11 /* GameViewController.swift */,
 				31E645DF1C0BC4A100DD7F11 /* Main.storyboard */,
+				540EFF381D22C508001B9DA5 /* ConfigViewController.swift */,
 				54014D421CFE4F5D00CF9B23 /* GameOverViewController.swift */,
 				54014D401CFE4E1300CF9B23 /* MainMenuViewController.swift */,
 				31E645E21C0BC4A100DD7F11 /* Images.xcassets */,
@@ -238,6 +241,7 @@
 			files = (
 				54014D411CFE4E1300CF9B23 /* MainMenuViewController.swift in Sources */,
 				31E645DC1C0BC4A100DD7F11 /* GameScene.swift in Sources */,
+				540EFF391D22C508001B9DA5 /* ConfigViewController.swift in Sources */,
 				31E645DE1C0BC4A100DD7F11 /* GameViewController.swift in Sources */,
 				31E645D81C0BC4A100DD7F11 /* AppDelegate.swift in Sources */,
 				54014D431CFE4F5D00CF9B23 /* GameOverViewController.swift in Sources */,
